@@ -4,21 +4,20 @@ body {
 
 .container {
     display: flex;
-    flex-direction: center;
-    justify-content: center;
+    height: 300px;
+
 }
 
 .logo {
-    /* align-items: center; */
     display: flex;
-    flex-direction: center;
     margin: 50px auto;
 }
 
-p {
-    text-align: center;
-    margin-top: 50px;
+.container-child {
+    margin: auto;
+}
 
+p {
     font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -40,7 +39,7 @@ h1 {
     line-height: 66px;
     text-align: center;
     color: #2D2D2D;
-    margin-top: -10px;
+    /* margin-top: -10px; */
 }
 
 .color-blue {
@@ -52,19 +51,18 @@ h1 {
     margin-bottom: 45px;
 }
 
-/* div {
-    padding-left: 150px;
-} */
-
 input {
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
-    width: 784px;
+    width: 984px;
     border: none;
     border-bottom: 1px solid #ABABAB;
     background: none;
+}
 
+#input-field {
+    margin: 80px 0 0 200px;
 
 }
 
@@ -77,7 +75,8 @@ label {
     position: absolute;
     pointer-events: none;
     left: 5px;
-    top: 10px;
+    top: 0px;
+
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
@@ -103,6 +102,8 @@ input:valid~label {
     position: relative;
     display: block;
     width: 300px;
+
+    /* padding-left: 30px; */
 }
 
 .bar:before,
@@ -122,14 +123,14 @@ input:valid~label {
     left: 50%;
 }
 
-.bar:after {
+/* .bar:after {
     right: 50%;
-}
+} */
 
 /* active state */
 input:focus~.bar:before,
 input:focus~.bar:after {
-    width: 650px;
+    width: 850px;
 
 }
 
@@ -183,4 +184,33 @@ input:focus~.highlight {
         width: 0;
         background: transparent;
     }
+}
+
+
+a {
+    padding: 16px 24px;
+    width: 110px;
+    height: 15px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #FFFFFF;
+    backdrop-filter: blur(4px);
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #48B8C6;
+    border-radius: 8px;
+}
+
+.btn {
+    display: flex;
+    /* width: 100px; */
+    /* height: 300px; */
+    justify-content: flex-end;
+    margin-right: 215px;
+
 }
