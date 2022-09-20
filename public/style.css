@@ -234,7 +234,7 @@ a {
         font-size: 18px;
         /* padding: 10px 10px 10px 5px;
         display: block; */
-        width: 300px;
+        width: 330px;
         /* border: none;
         border-bottom: 1px solid #ABABAB;
         background: none; */
@@ -242,12 +242,12 @@ a {
 
     input:focus~.bar:before,
     input:focus~.bar:after {
-        width: 165px;
+        width: 195px;
 
     }
 
     #input-field {
-        margin: 20px 0 0 80px;
+        margin: 20px 0 0 120px;
 
     }
 
@@ -265,7 +265,7 @@ a {
     }
 
     .btn {
-        margin-right: 88px;
+        margin-right: 118px;
 
     }
 
