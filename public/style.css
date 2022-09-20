@@ -1,3 +1,7 @@
+/* * {
+    font-size: 62.5%;
+} */
+
 body {
     background: url(.//Background.png);
 }
@@ -212,5 +216,57 @@ a {
     /* height: 300px; */
     justify-content: flex-end;
     margin-right: 215px;
+
+}
+
+/* mobile view */
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 25px;
+        /* margin-top: -10px; */
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    input {
+        font-size: 18px;
+        /* padding: 10px 10px 10px 5px;
+        display: block; */
+        width: 300px;
+        /* border: none;
+        border-bottom: 1px solid #ABABAB;
+        background: none; */
+    }
+
+    input:focus~.bar:before,
+    input:focus~.bar:after {
+        width: 165px;
+
+    }
+
+    #input-field {
+        margin: 20px 0 0 80px;
+
+    }
+
+    label {
+
+        font-size: 15px;
+    }
+
+    a {
+        padding: 16px 24px;
+        width: 70px;
+        height: 15px;
+        font-size: 12px;
+        border: 2px solid #E5F5F7;
+    }
+
+    .btn {
+        margin-right: 88px;
+
+    }
 
 }
