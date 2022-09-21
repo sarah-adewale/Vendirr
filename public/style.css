@@ -59,6 +59,7 @@ input {
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
+    /* justify-content: center; */
     width: 984px;
     border: none;
     border-bottom: 1px solid #ABABAB;
@@ -220,21 +221,31 @@ a {
 }
 
 /* mobile view */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 375px),
+(max-width: 400px),
+(max-width: 497px),
+(max-width: 600px),
+(max-width: 858px),
+(max-width: 925px)
+
+/*(max-width: 400px),
+(max-width: 497px)*/
+    {
     p {
-        font-size: 25px;
-        /* margin-top: -10px; */
+        font-size: 15px;
+        margin-top: -130px;
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 20px;
+        line-height: 30px;
     }
 
     input {
         font-size: 18px;
         /* padding: 10px 10px 10px 5px;
         display: block; */
-        width: 330px;
+        width: 230px;
         /* border: none;
         border-bottom: 1px solid #ABABAB;
         background: none; */
@@ -242,12 +253,12 @@ a {
 
     input:focus~.bar:before,
     input:focus~.bar:after {
-        width: 195px;
+        width: 95px;
 
     }
 
     #input-field {
-        margin: 20px 0 0 120px;
+        margin: -70px 0 0 65px;
 
     }
 
@@ -270,3 +281,74 @@ a {
     }
 
 }
+
+@media screen and (max-width: 497px),
+(max-width: 858px),
+(max-width: 925px) {
+    input {
+        font-size: 18px;
+        width: 530px;
+    }
+
+    input:focus~.bar:before,
+    input:focus~.bar:after {
+        width: 395px;
+
+    }
+
+    #input-field {
+        margin: -70px 0 0 110px;
+
+    }
+
+    label {
+
+        font-size: 15px;
+    }
+
+    a {
+        padding: 16px 24px;
+        width: 70px;
+        height: 15px;
+        font-size: 12px;
+        border: 2px solid #E5F5F7;
+    }
+
+    .btn {
+        margin-right: 118px;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    input {
+        font-size: 18px;
+        width: 140px;
+    }
+
+    input:focus~.bar:before,
+    input:focus~.bar:after {
+        width: 305px;
+
+    }
+}
+
+@media screen and (max-width: 925px) {
+    input {
+        font-size: 18px;
+        width: 640px;
+    }
+
+    input:focus~.bar:before,
+    input:focus~.bar:after {
+        width: 505px;
+
+    }
+}
+
+/* @media screen and (min-device-width: 1440px)
+@media (max-width: 858px)
+@media screen and (max-width: 925px)
+@media screen and (max-width: 479px)
+@media screen and (max-width: 375px)
+ */
