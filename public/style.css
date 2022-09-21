@@ -224,7 +224,7 @@ a {
 @media screen and (max-width: 375px),
 (max-width: 400px),
 (max-width: 497px),
-(max-width: 600px),
+(max-width: 500px),
 (max-width: 858px),
 (max-width: 925px)
 
@@ -302,7 +302,6 @@ a {
     }
 
     label {
-
         font-size: 15px;
     }
 
@@ -320,19 +319,6 @@ a {
     }
 }
 
-@media screen and (max-width: 600px) {
-    input {
-        font-size: 18px;
-        width: 140px;
-    }
-
-    input:focus~.bar:before,
-    input:focus~.bar:after {
-        width: 305px;
-
-    }
-}
-
 @media screen and (max-width: 925px) {
     input {
         font-size: 18px;
@@ -342,6 +328,38 @@ a {
     input:focus~.bar:before,
     input:focus~.bar:after {
         width: 505px;
+
+    }
+}
+
+@media screen and (max-width: 500px),
+(max-width: 600px) {
+    input {
+        font-size: 18px;
+        width: 300px;
+    }
+
+    input:focus~.bar:before,
+    input:focus~.bar:after {
+        width: 165px;
+
+    }
+
+    .btn {
+        margin-right: 58px;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    input {
+        font-size: 18px;
+        width: 400px;
+    }
+
+    input:focus~.bar:before,
+    input:focus~.bar:after {
+        width: 265px;
 
     }
 }
