@@ -1,8 +1,9 @@
+<%- include('partials/nav') -%>
 <%- include('partials/header') -%>
 
     <div>
-        <p><strong>User Name</strong>: <%= user.firstName %></p>
-        <p><strong>User Name</strong>: <%= user.lastName %></p>
+        <p><strong>First Name</strong>: <%= user.firstName %></p>
+        <p><strong>Last Name</strong>: <%= user.lastName %></p>
         <p><strong>Email</strong>: <%= user.email %></p>
         <a href="/logout" class="col-3 btn btn-primary">Logout</a>
     </div>

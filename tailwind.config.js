@@ -54,8 +54,8 @@ module.exports = {
 
       },
       fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      sans: ['Epilogue', 'sans-serif'],
+      //serif: ['Merriweather', 'serif'],
     },
   },
   plugins: [

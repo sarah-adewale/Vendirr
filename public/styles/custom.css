@@ -1,5 +1,10 @@
 .browse-vendors {
-    color: #0E7987;
+    color: #2D2D2D;
+    font-family: 'Epilogue', sans-serif;
+}
+
+body {
+    background: #fff;
 }
 
 header {

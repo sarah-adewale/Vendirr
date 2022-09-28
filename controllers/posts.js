@@ -14,20 +14,20 @@ module.exports = {
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "asc" }).lean(); //find and sort in descending order. lean() structures data in a specific way
-      res.render("explore.ejs", { posts: posts }); //posts is now called posts in our ejs
+      res.render("feed.ejs", { posts: posts }); //posts is now called posts in our ejs
     } catch (err) {
       console.log(err);
     }
   },
-//   getPost: async (req, res) => {
-//     try {
-//       const post = await Post.findById(req.params.id);
-//       const comments = await Comment.find({post: req.params.id}).sort({ createdAt: "asc" }).lean(); //pjo (lean: pure javascript object)
-//       res.render("post.ejs", { post: post, user: req.user, comments: comments });
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   },
+  getPost: async (req, res) => {
+    try {
+      const post = await Post.findById(req.params.id);
+    //   const comments = await Comment.find({post: req.params.id}).sort({ createdAt: "asc" }).lean(); //pjo (lean: pure javascript object)
+      res.render("post.ejs", { post: post, user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
 //   createPost: async (req, res) => {
 //     try {
 //       // Upload image to cloudinary

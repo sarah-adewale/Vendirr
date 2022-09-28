@@ -1,4 +1,62 @@
-<%- include('partials/header') -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/main.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/tailwind.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/custom.css">
+    
+    <title>This is the Homepage</title>
+</head>
+<body>
+    <!-- <h1 class="text-3xl">Hello World</h1> -->
+
+  
+
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 ">
+    <div class="container flex flex-wrap justify-between items-center mx-auto">
+    <a href="/" class="flex items-center">
+        <img src="./images/Logo-main.png" alt="Venddir Logo">
+        <!-- <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
+    </a>
+    <div class="flex items-center md:order-2">
+        <p class="browse-vendors mr-6">Browse Vendors</p>
+        <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+        <span class="sr-only">Open user menu</span>
+        <img class="" src="./images/Hamburger.png" alt="user photo">
+        </button>
+        <!-- Dropdown menu -->
+        <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow " id="user-dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 477px);">
+        
+        <ul class="py-1" aria-labelledby="user-menu-button">
+            <li>
+            <a href="signup" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Sign Up</a>
+            </li>
+            <li>
+            <a href="/login" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Login</a>
+            </li>
+        
+        </ul>
+        </div>
+
+    </div>
+
+    </div>
+    </nav>
+
 
 <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
   <div class="w-full max-w-md space-y-8">
@@ -6,7 +64,7 @@
       
       <h2 class=" mb-6 text-center text-3xl font-light tracking-tight text-gray-300">Create An Account</h2>
       
-      <button type="button" class="text-black bg-[#FFFFFF] mt-6 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-full border border-gray-200 text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2">
+      <button type="button" class="text-black bg-[#FFFFFF] mt-6 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-full border border-gray-200 text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2">
         <svg class="mr-2 -ml-1 w-4 h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg>
             Continue with Google
       </button>
@@ -15,34 +73,40 @@
         <a href="#" class="font-small text-indigo-600 hover:text-indigo-500">use your email:</a>
       </p>
     </div>
+
+    <section>
         <% if (locals.messages.errors) { %>
                     <% messages.errors.forEach( el => { %>
-                        <div class="alert alert-danger"><%= el.msg %></div>
+                        <div class=""><%= el.msg %></div>
                     <% }) %>    
                 <% } %> 
                 <% if (locals.messages.info) { %>
                     <% messages.info.forEach( el => { %>
-                        <div class="alert alert-info"><%= el.msg %></div>
+                        <div class=""><%= el.msg %></div>
                     <% }) %>    
                 <% } %>
-    <form class="space-y-6" action="/signup">
+    <form class="space-y-6" action="/signup" method="POST">
         <div>
-            <label for="firstName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your First Name</label>
-            <input type="text" name="firstName" id="firstName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="your first name" required="">
+            <label for="firstName" class="block mb-2 text-sm font-medium text-gray-900 ">Your First Name</label>
+            <input type="text" name="firstName" id="firstName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="your first name" required="">
         </div>
         <div>
             <label for="lastName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Last Name</label>
-            <input type="text" name="lastName" id="lastName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="your last name" required="">
+            <input type="text" name="lastName" id="lastName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="your last name" required="">
         </div>
         <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required="">
+            <label for="inputEmail" class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
+            <input type="email" name="email" id="inputEmail" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="name@company.com" required="">
         </div>
         <div>
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password</label>
-            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
+            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Your password</label>
+            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " required="">
         </div>
-        <div class="flex justify-between">
+        <div>
+            <label for="confirmPassword" class="block mb-2 text-sm font-medium text-gray-900 ">Your password</label>
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " required="">
+        </div>
+        <!-- <div class="flex justify-between">
             <div class="flex items-start">
                 <div class="flex items-center h-5">
                     <input id="remember" type="checkbox" value="" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required="">
@@ -50,12 +114,14 @@
                 <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
             </div>
             <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-        </div>
-        <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create my account</button>
-        <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-            Already a user? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Login</a>
+        </div> -->
+        <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Create my account</button>
+        <div class="text-sm font-medium text-gray-500 ">
+            Already a user? <a href="#" class="text-blue-700 hover:underline ">Login</a>
         </div>
     </form>
+    </section>
+        
   </div>
 </div>
 
