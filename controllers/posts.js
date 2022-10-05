@@ -11,6 +11,14 @@ module.exports = {
       console.log(err);
     }
   },
+    getVendorprofile: async (req, res) => {
+    try {
+      const posts = await Post.find({ user: req.user.id }); //grabs all the post of specified logged in user
+      res.render("vendorprofile.ejs", { posts: posts, user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "asc" }).lean(); //find and sort in descending order. lean() structures data in a specific way
@@ -28,25 +36,29 @@ module.exports = {
       console.log(err);
     }
   },
-//   createPost: async (req, res) => {
-//     try {
-//       // Upload image to cloudinary
-//       const result = await cloudinary.uploader.upload(req.file.path);
+  createPost: async (req, res) => {
+    try {
+      // Upload image to cloudinary
+      const result = await cloudinary.uploader.upload(req.file.path);
 
-//       await Post.create({
-//         title: req.body.title,
-//         image: result.secure_url,
-//         cloudinaryId: result.public_id,
-//         caption: req.body.caption,
-//         likes: 0,
-//         user: req.user.id,
-//       });
-//       console.log("Post has been added!");
-//       res.redirect("/profile");
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   },
+      await Post.create({
+        vendorName: req.body.vendorName,
+        image: result.secure_url,
+        cloudinaryId: result.public_id,
+        about: req.body.about,
+        address: req.body.address,
+        closingTime: req.body.closingTime,
+        websiteLink: req.body.websiteLink,
+        phoneNumber: req.body.phoneNumber,
+        // reviews: 0,
+        user: req.user.id,
+      });
+      console.log("Post has been added!");
+      res.redirect("/vendorprofile");
+    } catch (err) {
+      console.log(err);
+    }
+  },
 //   likePost: async (req, res) => {
 //     try {
 //       await Post.findOneAndUpdate(

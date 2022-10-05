@@ -10,8 +10,497 @@ body {
 header {
     width: 1441px;
     height: 402px;
+    background: url(./background.png);
 }
 
 nav {
     border-bottom: 3px solid red;
+}
+
+
+
+.header-form {
+    width: 483px;
+    height: 77px;
+    background: #EDF8F9;
+    border-radius: 24px;
+    border: none;
+}
+
+.search-container {
+    margin-top: 65px;
+}
+
+.button {
+    width: 134px;
+    height: 78px;
+    background: #2B6E77;
+    border-radius: 24px;
+    color: #f3f3f3;
+    margin-left: -60px;
+}
+
+.input-left {
+    margin-left: -45px;
+}
+
+.header-text {
+    color: #f3f3f3;
+    padding-top: 80px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39px;
+}
+
+.briefcase-icon {
+    margin-left: -70px;
+}
+
+input {
+    border: none;
+    /* border-radius: 24px; */
+    width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+.form-group {
+    padding: 5px;
+    border: 1px solid #ABABAB;
+    border-radius: 8px;
+    margin: 10px;
+    width: 400px;
+    height: 75px;
+    font-size: 12px;
+}
+
+
+
+.form-group>label {
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    top: -20px;
+    left: 20px;
+    background-color: white;
+
+}
+
+.form-group>input {
+    border: none;
+}
+
+.password-field {
+    border: 1px solid #ABABAB;
+    border-radius: 8px;
+    margin: 10px;
+    width: 480px;
+    height: 70px;
+}
+
+.email-field {
+    width: 429px;
+}
+
+::placeholder {
+    font-size: 14px;
+    color: #575757 !important;
+}
+
+.signup-button {
+    width: 480px;
+    height: 48px;
+    background: #1390A0 !important;
+    box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #F3F3F3;
+    font-family: 'Epilogue', sans-serif;
+    margin-left: 12px;
+}
+
+.google-button {
+    margin-left: 132px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.signin-text-two {
+    margin-left: 28px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.name-field {
+    width: 229px;
+    border: 1px solid #ABABAB;
+    border-radius: 8px;
+    margin: 10px;
+
+    height: 70px;
+}
+
+.signin-text {
+    font-family: 'Epilogue', sans-serif;
+    color: #818181;
+    margin-left: 22px;
+}
+
+.signin-text-three {
+    margin-left: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.signin-text-three>a {
+    color: #1390A0;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #48B8C6;
+}
+
+.top {
+    margin-top: 80px;
+}
+
+.bottom {
+    margin-bottom: 20px;
+}
+
+.second-input {
+    width: 450px;
+}
+
+.cat-dropdown {
+    border-radius: 30px 0px 0px 30px;
+    width: 400px;
+    background: #EDF8F9;
+    color: #575757;
+
+}
+
+form {
+    margin-top: 70px;
+}
+
+.search-input {
+    border-radius: 0px 30px 30px 0px;
+}
+
+.category-container {
+    height: 100px;
+    margin-top: 80px;
+    margin-left: 180px;
+}
+
+.category-list {
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    align-items: center;
+}
+
+.top-rated {
+    margin: 0 0 20px 80px;
+}
+
+.vendor-container {
+    width: 1275px;
+    height: 239px;
+    background: #F1F1ED;
+    /* Black/20 */
+
+    border: 1px solid #D5D5D5;
+    border-radius: 8px;
+    margin-left: 80px;
+
+}
+
+.vendor-avatar {
+    width: 80px;
+    height: 80px;
+    margin: 20px 20px 0 30px;
+    background: #FFFFFF;
+    border-radius: 100px;
+}
+
+.icon-border {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #D5D5D5;
+    border-radius: 100px;
+}
+
+.second-vendor-container {
+    margin-top: 30px;
+}
+
+.avatar-img {
+    margin: 22px 0 0 21px;
+}
+
+.vendor-name {
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 25px;
+    color: #2D2D2D;
+}
+
+.vendor-category {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #818181;
+    margin-top: 10px;
+}
+
+.vendor-directions {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: #575757;
+
+}
+
+.vendor-about {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    /* Black/100 */
+
+    color: #2D2D2D;
+    margin-top: 20px;
+}
+
+.icon-img {
+    margin: 6px 0 0 7px;
+}
+
+.vendor-hours {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #58A942;
+}
+
+.vendor-time {
+    color: #2D2D2D;
+}
+
+.contact-section {
+    margin-left: 78px;
+}
+
+.vendor-reviews {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 4px;
+    /* Black/60 */
+
+    color: #818181;
+}
+
+.profile-background {
+    width: 1440px;
+    height: 164px;
+    background: #0E2528;
+}
+
+.account-text {
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 26px;
+    margin-left: 200px;
+    padding-top: 80px;
+
+    color: #F3F3F3;
+}
+
+.menu-items {
+    margin-left: 200px;
+    padding-top: 22px;
+}
+
+.profile-input {
+    width: 407px;
+    height: 56px;
+}
+
+.user-info {
+    margin-left: 200px;
+}
+
+.basic-info-text {
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #2D2D2D;
+    margin-left: 10px;
+}
+
+.profile-border {
+    margin-top: 80px;
+    /* margin-left: 200px; */
+    border: 1px solid #D5D5D5;
+    width: 846px;
+}
+
+.profile-text {
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #2D2D2D;
+    /* margin-left: 200px; */
+    margin-top: 50px;
+}
+
+.avatar-bg {
+    width: 120px;
+    height: 120px;
+    background: #fbedef;
+    border: 1px solid #48B8C6;
+    border-radius: 1e+11px;
+    /* margin-left: 200px; */
+    margin-top: 30px;
+}
+
+.avatar-discard-remove {
+    margin-top: 10px;
+}
+
+.upload-bg {
+    width: 120px;
+    height: 120px;
+    /* Black/10 */
+    background: #EAEAEA;
+    /* Black/40 */
+    margin-top: 30px;
+    border: 1.71429px dashed #ABABAB;
+    border-radius: 1.71429e+10px;
+}
+
+.upload-text {
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: #818181;
+    margin-top: 7px;
+    text-align: center;
+}
+
+.upload-icon {
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.discard-btn {
+    padding: 16px 32px;
+    width: 124px;
+    height: 48px;
+    border: 1px solid #ABABAB;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2D2D2D;
+}
+
+.save-btn {
+    padding: 16px 32px;
+    width: 152px;
+    height: 48px;
+    background: #1390A0;
+    box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #F3F3F3;
+}
+
+.create-btn {
+    padding: 20px 36px;
+    width: 172px;
+    height: 68px;
+}
+
+.save-profile-section {
+    margin-top: 250px;
+    margin-left: 270px;
+}
+
+.create-profile-section {
+    margin-left: 530px;
+}
+
+.avatar-discard-text {
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    color: #818181;
+    margin-top: 7px;
+}
+
+.email-field-two {
+    width: 834px;
+}
+
+.about-field {
+    width: 834px;
+    height: 200px;
 }

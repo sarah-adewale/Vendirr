@@ -1,0 +1,86 @@
+<%- include('partials/nav') -%>
+
+
+    <section>
+        <div class="profile-background">
+            <h1 class="account-text">Welcome <%= user.vendorName %></h1>
+            <div class="flex gap-6 menu-items">
+                <a href="/vendorprofile">Profile</a>
+                <a href="#">Security</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="user-info">
+        
+        <form class="space-y-6" action="/post/createPost" enctype="multipart/form-data" method="POST">
+            <h2 class="basic-info-text">Business Info</h2>
+            <section class="flex flex-row ">
+                <div class="">
+                    <label for="vendorName" class="info-label"></label>
+                    <input type="text" name="vendorName" id="vendorName" class="name-field form-control profile-input rounded-lg " placeholder="<%= user.vendorName %>" required="">
+                </div>
+                <div class="">
+                    <label for="address" class=""></label>
+                    <input type="text" name="address" id="address" class="name-field form-control profile-input rounded-lg" placeholder="Business Address" required="">
+                </div>
+            </section>
+        
+             <div class=" email-field">
+                <label for="websiteLink" class=""></label>
+                <input type="text" name="websiteLink" id="websiteLink" class="password-field email-field-two form-control profile-input rounded-lg" placeholder="website link" required="">
+            </div>
+
+            <div class=" email-field">
+                <label for="phoneNumber" class=""></label>
+                <input type="number" name="phoneNumber" id="phoneNumber" class="password-field email-field-two form-control profile-input rounded-lg" placeholder="phone number" required="">
+            </div>
+
+            <div class=" email-field">
+                <label for="about" class=""></label>
+                <textarea name="about" id="about"  class="password-field about-field form-control profile-input rounded-lg" placeholder="Tell people about your business"></textarea>
+                <!-- <input type="text" name="about" id="about" class="password-field about-field form-control profile-input rounded-lg" placeholder="<%= user.email %>" required=""> -->
+            </div>
+
+             <div class=" email-field">
+                <label for="closingTime" class=""></label>
+                <input type="text" name="closingTime" id="closingTime" class="password-field email-field-two form-control profile-input rounded-lg" placeholder="what time do your close" required="">
+            </div>
+
+            
+            <section>
+                <div class="profile-border"></div>
+                <h2 class="profile-text">Business Logo</h2>
+
+            </section>
+            <section class="flex gap-6">
+                <!-- <div class="avatar-bg block">
+                    <img src="./images/avatar.png" alt="">
+                    <div class="flex gap-3 avatar-discard-remove">
+                        <p class="avatar-discard-text">Discard</p>
+                        <span>|</span>
+                        <p class="avatar-discard-text">Remove</p>
+                    </div>
+                </div> -->
+                <div class="upload-bg">
+                    <!-- <i class="ph-camera upload-icon"> -->
+                        <input type="file" class="upload-icon" id="" name="file" ><i>class="ph-camera upload-icon"</i>
+                    <!-- </i> -->
+                    <p class="upload-text">Click or drag <br> to upload</p>
+                </div>
+                <!-- <div class="mb-3"> -->
+                <!-- <label for="imgUpload" class="form-label upload-text">Click or drag <br> to upload</label> -->
+                
+              <!-- </div> -->
+                <section class="flex gap-6 save-profile-section create-profile-section">
+                    <!-- <button class="discard-btn">Discard</button> -->
+                    <button class="save-btn create-btn">Create Public Profile</button>
+                </section>
+                
+            </section>
+       
+        </form>
+    </section>
+
+    <%- include('partials/footer') -%>

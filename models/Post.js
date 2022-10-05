@@ -5,10 +5,10 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  tags:{
-    type: String,
-    required: true,
-  },
+  // tags:{
+  //   type: String,
+  //   required: true,
+  // },
   image: {
     type: String,
     require: true,
@@ -17,7 +17,7 @@ const PostSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  caption: {
+  about: {
     type: String,
     required: true,
   },
@@ -25,10 +25,23 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  reviews: {
+  closingTime: {
+    type: String,
+    required: true,
+  },
+  websiteLink: {
+    type: String,
+    required: true,
+  },
+  phoneNumber: {
     type: Number,
     required: true,
   },
+  
+  // reviews: {
+  //   type: Number,
+  //   required: true,
+  // },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",

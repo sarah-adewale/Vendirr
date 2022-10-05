@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/phosphor-icons"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/styles/tailwind.css">
@@ -23,5 +24,51 @@
 </head>
 <body>
     <header>
-    <img src="./images/Background.png" alt="">
+    <!-- <img src="./images/Background.png" alt=""> -->
+    <h1 class="text-center text-5xl font-bold header-text">Find the right vendor</h1>
+    
+    <!-- <input type="text" id="search-navbar" class="second-input block p-2 pl-10  text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Search...">
+    <button class="button" type="submit">Search</button> -->
+    <!-- <form action="" class="flex justify-center flex-wrap gap-0 ">
+        <div class="search-container">
+            <input type="text" class="header-form" placeholder="Who you need..">
+            <input type="text" class="header-form input-left" placeholder="Where you need ‘em...">
+            <button class="button" type="submit">Search</button>
+        </div>
+    </form> -->
+
+
+<form>
+    <div class="flex justify-center flex-wrap gap-0 ">
+        
+        
+        <button id="dropdown-button" data-dropdown-toggle="dropdown" class="cat-dropdown flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center" type="button"><i class="ph-map-pin-line" style="color: #48B8C6;"></i>Where you need 'em </button>
+        <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
+            <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdown-button">
+            <li>
+                <button type="button" class="inline-flex py-2 px-4 w-full hover:bg-gray-100">Mockups</button>
+            </li>
+            <li>
+                <button type="button" class="inline-flex py-2 px-4 w-full hover:bg-gray-100">Templates</button>
+            </li>
+            <li>
+                <button type="button" class="inline-flex py-2 px-4 w-full hover:bg-gray-100">Design</button>
+            </li>
+            <li>
+                <button type="button" class="inline-flex py-2 px-4 w-full hover:bg-gray-100">Logos</button>
+            </li>
+            </ul>
+        </div>
+        <div class="relative">
+            
+            <input type="search" id="search-dropdown" class="search-input block p-2.5 header-form z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500"  placeholder=" Who you need" required="">
+            <button type="submit" class="button absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+                <!-- <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> -->
+                <span class="">Search</span>
+            </button>
+        </div>
+    </div>
+</form>
+
   </header>
+<!-- <i class="fa-solid fa-briefcase briefcase-icon"></i> -->
