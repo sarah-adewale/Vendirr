@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/phosphor-icons"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/styles/tailwind.css">
@@ -33,21 +34,22 @@
         <!-- <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
     </a>
     <div class="flex items-center md:order-2">
-        <p class="browse-vendors mr-6">Become a Vendor</p>
+        
         <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-        <span class="sr-only">Open user menu</span>
-        <img class="" src="./images/Hamburger.png" alt="user photo">
+            <span class="sr-only">Open user menu</span>
+            <div class="hamburger-border">
+                <i class="ph-list" style="color: #818181;" size="50"></i>
+                <i class="ph-user-fill" style="color: #575757;"></i>
+            </div>
         </button>
         <!-- Dropdown menu -->
         <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow " id="user-dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 477px);">
         
         <ul class="py-1" aria-labelledby="user-menu-button">
              <li>
-                <a href="/signup" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Signup as a user</a>
+                <a href="/signup" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Sign up</a>
             </li>
-            <li>
-                <a href="/vendorsignup" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Signup as a vendor</a>
-            </li>
+           
             <li>
                 <a href="/login" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Login</a>
             </li>
@@ -65,13 +67,13 @@
   <div class="w-full max-w-md space-y-8">
     <div>
       
-      <h2 class="signin-text text-center text-3xl font-light tracking-tight">Create An Account</h2>
-      
-      <button type="button" class="text-black bg-[#FFFFFF] mt-6 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 rounded-full border border-gray-200 text-sm px-6 py-3 text-center inline-flex items-center google-button mb-2">
+      <h2 class="signin-text text-center text-3xl font-light tracking-tight">Become A Vendor</h2>
+      <p class="text-center signin-text-three mt-2">List your business to gain reach</p>
+      <button type="button" class="text-black bg-[#FFFFFF] focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 rounded-full border border-gray-200 text-sm px-6 py-3 text-center inline-flex items-center google-button mb-2">
         <svg class="mr-2 -ml-1 w-4 h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg>
             Continue with Google
       </button>
-      <p class="mt-2 text-center text-sm text-gray-600 signin-text-two">
+      <p class=" text-center mt-2 text-sm text-gray-600 signin-text-two">
         Or use your email:
       </p>
     </div>
@@ -87,36 +89,36 @@
                         <div class=""><%= el.msg %></div>
                     <% }) %>    
                 <% } %>
-    <form class="space-y-6" action="/vendorsignup" method="POST">
-        <section class="flex flex-row ">
-            <!-- <div class="">
-                <label for="firstName" class=""></label>
-                <input type="text" name="firstName" id="firstName" class="name-field form-control rounded-lg " placeholder="first name" required="">
-            </div> -->
-            <div class="email-field">
-                <label for="vendorName" class=""></label>
-                <input type="text" name="vendorName" id="vendorName" class="password-field form-control rounded-lg" placeholder=" Business name" required="">
+        <form class="space-y-6" action="/vendorsignup" method="POST">
+            <section class="flex flex-row ">
+                <div class="">
+                    <label for="firstName" class=""></label>
+                    <input type="text" name="firstName" id="firstName" class="name-field form-control rounded-lg " placeholder="first name" required="">
+                </div>
+                <div class="">
+                    <label for="lastName" class=""></label>
+                    <input type="text" name="lastName" id="lastName" class="name-field form-control rounded-lg" placeholder=" last name" required="">
+                </div>
+            </section>
+            
+            <div class=" email-field">
+                <label for="inputEmail" class=""></label>
+                <input type="email" name="email" id="inputEmail" class="password-field form-control rounded-lg" placeholder="orbees@sample.net" required="">
             </div>
-        </section>
-        
-        <div class=" email-field">
-            <label for="inputEmail" class=""></label>
-            <input type="email" name="email" id="inputEmail" class="password-field form-control rounded-lg" placeholder="orbees@sample.net" required="">
-        </div>
-        <div class=" email-field">
-            <label for="password" class=""></label>
-            <input type="password" name="password" id="password" placeholder="password" class="password-field form-control rounded-lg" required="">
-        </div>
-        <div class=" email-field">
-            <label for="confirmPassword" class=""></label>
-            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirm password" class="password-field form-control rounded-lg" required="">
-        </div>
-        
-        <button type="submit" class="signup-button">Create my account</button>
-        <div class="text-sm font-medium text-gray-500 signin-text-three">
-            Already a vendor? <a href="/login" class=" ">Login</a>
-        </div>
-    </form>
+            <div class=" email-field">
+                <label for="password" class=""></label>
+                <input type="password" name="password" id="password" placeholder="password" class="password-field form-control rounded-lg" required="">
+            </div>
+            <div class=" email-field">
+                <label for="confirmPassword" class=""></label>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirm password" class="password-field form-control rounded-lg" required="">
+            </div>
+            
+            <button type="submit" class="signup-button">Create my account</button>
+            <div class="text-sm font-medium text-gray-500 signin-text-three">
+                Already a vendor? <a href="/vendorlogin" class=" ">Login</a>
+            </div>
+        </form>
     </section>
         
   </div>

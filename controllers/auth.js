@@ -1,6 +1,7 @@
 const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
+const Vendor = require("../models/Vendor");
 
 exports.getLogin = (req, res) => {
   if (req.user) {
@@ -118,10 +119,55 @@ exports.postSignup = (req, res, next) => {
   );
 };
 
+
+// vendor login
+exports.getVendorlogin = (req, res) => {
+  if (req.vendor) {
+    return res.redirect("/explore");
+  }
+  res.render("vendorlogin", {
+    title: "Login",
+  });
+};
+
+exports.postVendorlogin = (req, res, next) => {
+  const validationErrors = [];
+  if (!validator.isEmail(req.body.email))
+    validationErrors.push({ msg: "Please enter a valid email address." });
+  if (validator.isEmpty(req.body.password))
+    validationErrors.push({ msg: "Password cannot be blank." });
+
+  if (validationErrors.length) {
+    req.flash("errors", validationErrors);
+    return res.redirect("/vendorlogin");
+  }
+  req.body.email = validator.normalizeEmail(req.body.email, {
+    gmail_remove_dots: false,
+  });
+
+  passport.authenticate("local", (err, vendor, info) => {
+    if (err) {
+      return next(err);
+    }
+    if (!vendor) {
+      req.flash("errors", info);
+      return res.redirect("/vendorlogin");
+    }
+    req.logIn(vendor, (err) => {
+      if (err) {
+        return next(err);
+      }
+      req.flash("success", { msg: "Success! You are logged in." });
+      res.redirect(req.session.returnTo || "/explore");
+    });
+  })(req, res, next);
+};
+
+
 // vendor signup
 exports.getVendorsignup = (req, res) => {
-  if (req.user) {
-    return res.redirect("/explore");
+  if (req.vendor) {
+    return res.redirect("/vendorprofile");
   }
   res.render("vendorsignup", {
     title: "Create Account",
@@ -147,36 +193,38 @@ exports.postVendorsignup = (req, res, next) => {
     gmail_remove_dots: false,
   });
 
-  const user = new User({
-    vendorName: req.body.vendorName,
-    // lastName: req.body.lastName,
+  const vendor = new Vendor({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
     email: req.body.email,
     password: req.body.password,
   });
 
-  User.findOne(
-    { $or: [{ email: req.body.email }, { vendorName: req.body.vendorName }] },
-    (err, existingUser) => {
+  Vendor.findOne(
+    { $or: [{ email: req.body.email }, { firstName: req.body.firstName }, { lastName: req.body.lastName }] },
+    (err, existingVendor) => {
       if (err) {
         return next(err);
       }
-      if (existingUser) {
+      if (existingVendor) {
         req.flash("errors", {
           msg: "Account with that email address or username already exists.",
         });
         return res.redirect("../vendorsignup");
       }
-      user.save((err) => {
+      vendor.save((err) => {
         if (err) {
           return next(err);
         }
-        req.logIn(user, (err) => {
+        req.logIn(vendor, (err) => {
           if (err) {
             return next(err);
           }
-          res.redirect("/explore");
+          res.redirect("/vendorprofile");
         });
       });
     }
   );
 };
+
+

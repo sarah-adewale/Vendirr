@@ -13,6 +13,8 @@ router.get('/vendorprofile', ensureAuth, postsController.getVendorprofile)
 router.get('/feed', ensureAuth, postsController.getFeed)
 router.get('/login', authController.getLogin)
 router.post('/login', authController.postLogin)
+router.get('/vendorlogin', authController.getVendorlogin)
+router.post('/vendorlogin', authController.postVendorlogin)
 // router.get("/explore", ensureAuth, postsController.getProfile);
 router.get('/logout', authController.logout) 
 router.get('/signup', authController.getSignup)

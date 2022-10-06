@@ -1,5 +1,6 @@
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
+// const Vendor = require("../models/Vendor");
 // const Comment = require("../models/Comment");
 
 module.exports = {
@@ -13,8 +14,8 @@ module.exports = {
   },
     getVendorprofile: async (req, res) => {
     try {
-      const posts = await Post.find({ user: req.user.id }); //grabs all the post of specified logged in user
-      res.render("vendorprofile.ejs", { posts: posts, user: req.user });
+      const posts = await Post.find({ user: req.vendor.id }); //grabs all the post of specified logged in user
+      res.render("vendorprofile.ejs", { posts: posts, user: req.vendor });
     } catch (err) {
       console.log(err);
     }

@@ -42,6 +42,10 @@ const PostSchema = new mongoose.Schema({
   //   type: Number,
   //   required: true,
   // },
+  vendor: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Vendor",
+  },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",

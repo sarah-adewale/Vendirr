@@ -125,6 +125,7 @@ select:focus {
 
 .google-button {
     margin-left: 132px;
+    margin-top: 40px;
     font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -504,3 +505,38 @@ form {
     width: 834px;
     height: 200px;
 }
+
+.hamburger-border {
+    padding: 8px 12px;
+    width: 64px;
+    height: 34px;
+    border: 1px solid #ABABAB;
+    border-radius: 100px;
+}
+
+.signin-text-three {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    color: #818181;
+}
+
+.location-icon {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.input-icons i {
+    position: absolute;
+}
+
+.search-input::placeholder {
+    padding-left: 30px;
+}
+
+/* .input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+} */
