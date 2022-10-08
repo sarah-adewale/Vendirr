@@ -5,8 +5,8 @@
         <div class="profile-background">
             <h1 class="account-text">My Account</h1>
             <div class="flex gap-6 menu-items">
-                <a href="/profile">Profile</a>
-                <a href="#">Security</a>
+                <a href="/profile" class="active">Profile</a>
+                <a href="/security">Security</a>
             </div>
         </div>
 
@@ -14,22 +14,22 @@
 
     <section class="user-info">
         
-        <form class="space-y-6" action="/signup" method="POST">
+        <form class="space-y-6">
             <h2 class="basic-info-text">Basic Info</h2>
             <section class="flex flex-row ">
                 <div class="">
                     <label for="firstName" class="info-label"></label>
-                    <input type="text" name="firstName" id="firstName" class="name-field form-control profile-input rounded-lg " placeholder="<%= user.firstName %>" required="">
+                    <input type="text" name="firstName" id="firstName" class="name-field form-control profile-input rounded-lg " placeholder="<%= user.firstName %>" required="" disabled>
                 </div>
                 <div class="">
                     <label for="lastName" class=""></label>
-                    <input type="text" name="lastName" id="lastName" class="name-field form-control profile-input rounded-lg" placeholder="<%= user.lastName %>" required="">
+                    <input type="text" name="lastName" id="lastName" class="name-field form-control profile-input rounded-lg" placeholder="<%= user.lastName %>" required="" disabled>
                 </div>
             </section>
         
             <div class=" email-field">
                 <label for="inputEmail" class=""></label>
-                <input type="email" name="email" id="inputEmail" class="password-field form-control profile-input rounded-lg" placeholder="<%= user.email %>" required="">
+                <input type="email" name="email" id="inputEmail" class="password-field form-control profile-input rounded-lg" placeholder="<%= user.email %>" required="" disabled>
             </div>
 
             
@@ -38,26 +38,35 @@
                 <h2 class="profile-text">Profile Photo</h2>
 
             </section>
-            <section class="flex gap-6">
-                <div class="avatar-bg block">
-                    <img src="./images/avatar.png" alt="">
-                    <div class="flex gap-3 avatar-discard-remove">
-                        <p class="avatar-discard-text">Discard</p>
-                        <span>|</span>
-                        <p class="avatar-discard-text">Remove</p>
-                    </div>
-                </div>
-                <div class="upload-bg">
-                    <i class="ph-camera upload-icon"></i>
-                    <p class="upload-text">Click or drag <br> to upload</p>
-                </div>
+        </form>
+
+        <form action="/signup" enctype="multipart/form-data" method="POST">
+            <section class="flex">
+                <section>
+                    <!-- <div class="avatar-bg block">
+                        <img src="./images/avatar.png" alt="">
+                        <div class="flex gap-3 avatar-discard-remove">
+                            <p class="avatar-discard-text">Discard</p>
+                            <span>|</span>
+                            <p class="avatar-discard-text">Remove</p>
+                        </div>
+                    </div> -->
+                    <button type="file" class="upload-section">
+                        <label for="imgUpload" class="form-label"></label>
+                        <div class="upload-bg">
+                            <i class="ph-camera upload-icon"></i>
+                            <p class="upload-text">Click or drag <br> to upload</p>
+                        </div>
+                    </button>
+                </section>
+                
+               
                 <section class="flex gap-6 save-profile-section">
                     <button class="discard-btn">Discard</button>
                     <button class="save-btn">Save Changes</button>
                 </section>
                 
             </section>
-       
         </form>
     </section>
     
