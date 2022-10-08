@@ -88,4 +88,16 @@ module.exports = {
 //       res.redirect("/profile");
 //     }
 //   },
+
+// getSecurity: (res, req) => {
+//   res.render('security.ejs')
+// }
+
+getSecurity: async (req, res) => {
+    try {
+      res.render('security.ejs')
+    } catch (err) {
+      console.log(err);
+    }
+  },
 };
