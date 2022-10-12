@@ -516,6 +516,9 @@ video {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.mt-6 {
+  margin-top: 1.5rem;
+}
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -542,9 +545,6 @@ video {
 }
 .mr-3 {
   margin-right: 0.75rem;
-}
-.mt-6 {
-  margin-top: 1.5rem;
 }
 .mb-2 {
   margin-bottom: 0.5rem;
@@ -615,6 +615,12 @@ video {
 .justify-between {
   justify-content: space-between;
 }
+.gap-6 {
+  gap: 1.5rem;
+}
+.gap-3 {
+  gap: 0.75rem;
+}
 .gap-10 {
   gap: 2.5rem;
 }
@@ -624,27 +630,15 @@ video {
 .gap-4 {
   gap: 1rem;
 }
-.gap-3 {
-  gap: 0.75rem;
-}
-.gap-6 {
-  gap: 1.5rem;
-}
-.gap-5 {
-  gap: 1.25rem;
-}
-.gap-8 {
-  gap: 2rem;
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
@@ -657,14 +651,14 @@ video {
 .whitespace-nowrap {
   white-space: nowrap;
 }
+.rounded-lg {
+  border-radius: 0.5rem;
+}
 .rounded-full {
   border-radius: 9999px;
 }
 .rounded {
   border-radius: 0.25rem;
-}
-.rounded-lg {
-  border-radius: 0.5rem;
 }
 .border {
   border-width: 1px;

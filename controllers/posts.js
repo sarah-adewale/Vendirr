@@ -12,6 +12,14 @@ module.exports = {
       console.log(err);
     }
   },
+  getBusinessprofile: async (req, res) => {
+    try {
+      const posts = await Post.find({ user: req.user.id }); //grabs all the post of specified logged in user
+      res.render("businessprofile.ejs", { posts: posts, user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
     getVendorprofile: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.vendor.id }); //grabs all the post of specified logged in user
