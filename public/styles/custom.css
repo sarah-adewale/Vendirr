@@ -368,7 +368,8 @@ form {
     margin-left: 200px;
 }
 
-.basic-info-text {
+.basic-info-text,
+.business-logo-text {
     font-family: 'Epilogue', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -563,4 +564,21 @@ form {
     margin-left: 200px;
     margin-top: 50px;
     color: white;
+}
+
+.business-logo-text {
+    padding-top: 30px;
+}
+
+.upload-button {
+    margin-top: -5px;
+}
+
+a:active {
+    border-bottom: 2px solid white;
+    color: green;
+}
+
+.business-input {
+    width: 834px;
 }
