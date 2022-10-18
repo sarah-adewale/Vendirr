@@ -28,65 +28,86 @@
   
 
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 ">
-    <div class="container flex flex-wrap justify-between items-center mx-auto">
-    <a href="/" class="flex items-center">
-        <img src="./images/Logo-main.png" alt="Venddir Logo">
-        <!-- <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
-    </a>
-    <div class="flex items-center md:order-2">
-        <a href="/vendorsignup"><p class="browse-vendors mr-6">Become a Vendor</p></a>
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="/" class="flex items-center">
+                <img src="./images/Logo-main.png" alt="Venddir Logo">
+                <!-- <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
+            </a>
+            <div class="flex items-center md:order-2">
+                <p class="browse-vendors mr-6">Become a Vendor</p>
+                <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                    <span class="sr-only">Open user menu</span>
+                    <!-- <img class="" src="./images/Hamburger.png" alt="user photo"> -->
+                    <div class="hamburger-border">
+                        <i class="ph-list" style="color: #818181; font-size: 18px;"></i>
+                        <i class="ph-user-fill" style="color: #575757; font-size: 18px;"></i>
+                    </div>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow " id="user-dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 477px);">
+                
+                    <ul class="py-1" aria-labelledby="user-menu-button">
+                        <li>
+                            <a href="/signup" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Sign up</a>
+                        </li>
+                        <li>
+                            <a href="/login" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Login</a>
+                        </li>
+                    </ul>
+                </div>
 
-    </div>
+            </div>
 
-    </div>
+        </div>
     </nav>
 
 
-<div class="mt-6 flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-  <div class="w-full max-w-md space-y-8">
-    <div>
-      
-      <h2 class=" signin-text text-center text-3xl font-light tracking-tight top bottom">Log in to your account</h2>
-      
-      <button type="button" class="text-black bg-[#FFFFFF] mt-6 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 rounded-full border border-gray-200 text-sm px-6 py-3 text-center inline-flex items-center google-button mb-2">
-        <svg class="mr-2 -ml-1 w-4 h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg>
-            Login with Google
-      </button>
-      <p class="mt-2 text-center text-sm text-gray-600 signin-text-two">
-        Or
-        use your email:
-      </p>
-    </div>
-    <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
-      <div class="alert alert-danger"><%= el.msg %></div>
-      <% }) %> <% } %> <% if (locals.messages.info) { %> <%
-      messages.info.forEach( el => { %>
-      <div class="alert alert-info"><%= el.msg %></div>
-      <% }) %> <% } %>
-    <form class="space-y-6" action="/login" method="POST">
-        <div class="email-field">
-            <label for="inputEmail" class=""></label>
-            <input type="email" name="email" id="inputEmail" class="password-field form-control rounded-lg" placeholder="name@company.com" required="">
-        </div class="email-field">
-        <div>
-            <label for="password" class=""></label>
-            <input type="password" name="password" id="password" placeholder="password" class="password-field form-control rounded-lg" required="">
-        </div>
-        <!-- <div class="flex justify-between">
-            <div class="flex items-start">
-                <div class="flex items-center h-5">
-                    <input id="remember" type="checkbox" value="" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500" required="">
-                </div>
-                <label for="remember" class="ml-2 text-sm font-medium text-gray-900">Remember me</label>
+    <div class="mt-6 flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-md space-y-8">
+            <div>
+            
+                <h2 class=" signin-text text-center text-3xl font-light tracking-tight top bottom">Log in to your account</h2>
+                
+                <button type="button" class="text-black bg-[#FFFFFF] mt-6 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 rounded-full border border-gray-200 text-sm px-6 py-3 text-center inline-flex items-center google-button mb-2">
+                    <svg class="mr-2 -ml-1 w-4 h-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg>
+                        Login with Google
+                </button>
+                <p class="mt-2 text-center text-sm text-gray-600 signin-text-two">
+                    Or
+                    use your email:
+                </p>
+                
             </div>
-            <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
-        </div> -->
-        <button type="submit" class="signup-button">Login to your account</button>
-        <div class="text-sm font-medium text-gray-500 signin-text-three">
-            Not registered? <a href="/signup" class="">Create account</a>
+            <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+            <div class="alert alert-danger"><%= el.msg %></div>
+            <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+            messages.info.forEach( el => { %>
+            <div class="alert alert-info"><%= el.msg %></div>
+            <% }) %> <% } %>
+            <form class="space-y-6" action="/login" method="POST">
+                <div class="email-field">
+                    <label for="inputEmail" class=""></label>
+                    <input type="email" name="email" id="inputEmail" class="password-field form-control rounded-lg" placeholder="name@company.com" required="">
+                </div class="email-field">
+                <div>
+                    <label for="password" class=""></label>
+                    <input type="password" name="password" id="password" placeholder="password" class="password-field form-control rounded-lg" required="">
+                </div>
+                <!-- <div class="flex justify-between">
+                    <div class="flex items-start">
+                        <div class="flex items-center h-5">
+                            <input id="remember" type="checkbox" value="" class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500" required="">
+                        </div>
+                        <label for="remember" class="ml-2 text-sm font-medium text-gray-900">Remember me</label>
+                    </div>
+                    <a href="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
+                </div> -->
+                <button type="submit" class="signup-button">Login to your account</button>
+                <div class="text-sm font-medium text-gray-500 signin-text-three">
+                    Not registered? <a href="/signup" class="">Create account</a>
+                </div>
+            </form>
         </div>
-    </form>
-  </div>
-</div>
+    </div>
 
 <%- include('partials/footer') -%>
