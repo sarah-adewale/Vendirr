@@ -510,8 +510,8 @@ form {
 
 .hamburger-border {
     padding: 8px 12px;
-    width: 64px;
-    height: 34px;
+    width: 70px;
+    height: 36px;
     border: 1px solid #ABABAB;
     border-radius: 100px;
 }
@@ -581,4 +581,114 @@ a:active {
 
 .business-input {
     width: 834px;
+
+    border: 1px solid #ABABAB;
+    border-radius: 8px;
+
+}
+
+.business-caption {
+    height: 126px;
+    margin-left: 11px;
+    margin-top: 12px;
+}
+
+.business-profile-field {
+    padding-top: 50px;
+}
+
+.input-footnote {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 400px;
+
+    text-align: right;
+
+    /* Primary/100 */
+
+    color: #48B8C6;
+}
+
+.business-info {
+    margin-left: 12px;
+}
+
+textarea::placeholder {
+    padding-left: 12px;
+    padding-top: 12px;
+}
+
+.cat-text {
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+
+    /* Black/80 */
+
+    color: #575757;
+}
+
+.cat-dropdown-btn-text {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    /* margin-left: 20px; */
+    line-height: 22px;
+    color: #575757;
+}
+
+.cat-dropdown-btn-text::placeholder {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    /* margin-left: 20px; */
+    line-height: 22px;
+    color: #575757;
+}
+
+.input-border {
+    padding-left: 210px;
+    height: 20px;
+    color: #C8EAEE;
+}
+
+.top-rated-text {
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #575757;
+}
+
+.create-biz-text {
+    margin-top: -50px;
+    margin-left: 40px !important;
+}
+
+.biz-avatar {
+    margin-left: 35px;
+    margin-top: 20px;
+}
+
+.remove-text {
+    margin-left: 35px;
+}
+
+.biz-input-layer {
+    margin-top: 50px;
+}
+
+.biz-text-area {
+    width: 480px;
+    height: 165px;
 }

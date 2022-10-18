@@ -59,7 +59,7 @@ exports.logout = (req, res) => {
 
 exports.getSignup = (req, res) => {
   if (req.user) {
-    return res.redirect("/profile");
+    return res.redirect("/vendorsignup");
   }
   res.render("signup", {
     title: "Create Account",
@@ -112,7 +112,7 @@ exports.postSignup = (req, res, next) => {
           if (err) {
             return next(err);
           }
-          res.redirect("/profile");
+          res.redirect("/vendorsignup");
         });
       });
     }
@@ -164,13 +164,9 @@ exports.postSignup = (req, res, next) => {
 // };
 
 
-// // vendor signup
+// vendor signup
 // exports.getVendorsignup = (req, res) => {
-//   if (req.vendor) {
-//     return res.redirect("/vendorprofile");
-//   }
-//   res.render("vendorsignup", {
-//     title: "Create Account",
+//   res.render("vendorsignup.ejs", {
 //   });
 // };
 
