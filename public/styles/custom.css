@@ -692,3 +692,20 @@ textarea::placeholder {
     width: 480px;
     height: 165px;
 }
+
+.choose-biz {
+    margin-left: 450px;
+    margin-top: 130px;
+
+}
+
+.input-form-dropdown-cat {
+    /* width: 600px; */
+    background: #F3F3F3;
+
+    /* Card */
+
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.15), -8px 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+}

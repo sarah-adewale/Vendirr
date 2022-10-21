@@ -18,7 +18,7 @@ router.post('/login', authController.postLogin)
 router.get('/logout', authController.logout) 
 router.get('/signup', authController.getSignup)
 router.post('/signup', authController.postSignup)
-router.get('/vendorsignup', vendorsController.getVendorsignup)
+router.get('/vendorsignup', ensureAuth, vendorsController.getVendorsignup)
 
 
 module.exports = router

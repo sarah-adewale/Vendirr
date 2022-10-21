@@ -21,6 +21,12 @@
     <link rel="stylesheet" href="/styles/custom.css">
     
     <title>This is the Homepage</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/site-icon.png"
+    />
 </head>
 <body>
     <!-- <h1 class="text-3xl">Hello World</h1> -->
@@ -130,34 +136,139 @@
                         <input type="text" name="confirmPassword" id="confirmPassword" placeholder="City" class="password-field form-control rounded-lg" required="">
                     </div>
                 </section>
-                <div class=" email-field">
+                <!-- <div class=" email-field">
                         <label for="confirmPassword" class=""></label>
-                        <select name="pets" id="pet-select" class="password-field form-control rounded-lg">
-                            <option value="">--Business Category--</option>
-                            <option value="dog">Dog</option>
+                        <select multiple name="pets" id="pet-select" class="password-field form-control rounded-lg">
+                            <option value="" >--Business Category--</option>
+                            <option value="dog">Bog</option>
                             <option value="cat">Cat</option>
                             <option value="hamster">Hamster</option>
                             <option value="parrot">Parrot</option>
                             <option value="spider">Spider</option>
                             <option value="goldfish">Goldfish</option>
                         </select>
+                </div> -->
+
+                
+                <input id="dropdownCheckboxButton" data-dropdown-toggle="dropdownDefaultCheckbox" class=" password-field form-control rounded-lg" type="button" value="Business Category">
+                <!-- <i class="ph-caret-down-fill choose-biz" style="font-size: 24px; color: #575757"></i> -->
+
+                <!-- Dropdown menu -->
+                <div id="dropdownDefaultCheckbox" class="hidden z-10 w-48 rounded divide-y divide-gray-100" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
+                    <ul class="p-3 space-y-3 text-sm text-gray-700 rounded input-form-dropdown-cat" aria-labelledby="dropdownCheckboxButton">
+                    <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-1" type="checkbox" value="" class="w-4 h-4 text-black-600 bg-white rounded border-gray-500 focus:ring-blue-500 ">
+                        <label for="checkbox-item-1" class="ml-2 text-sm font-medium text-gray-900">Clothes</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <input checked="" id="checkbox-item-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                            <label for="checkbox-item-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Books</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Gadgets</label>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Food</label>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Drinks</label>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Jewellery</label>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Plumbing</label>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Supplies</label>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Household Items</label>
+                        </div>
+                    </li>
+                    </ul>
                 </div>
+
 
                 <div>
                     <textarea name="" id="" cols="20" rows="10" placeholder="Tell us about your business" class="business-input business-caption biz-text-area"></textarea>
                     <p class="input-footnote">250 words</p>
                 </div>
-                <div class=" email-field">
-                        <label for="confirmPassword" class=""></label>
-                        <select name="pets" id="pet-select" class="password-field form-control rounded-lg">
-                            <option value="">--Business Category--</option>
-                            <option value="dog">Dog</option>
-                            <option value="cat">Cat</option>
-                            <option value="hamster">Hamster</option>
-                            <option value="parrot">Parrot</option>
-                            <option value="spider">Spider</option>
-                            <option value="goldfish">Goldfish</option>
-                        </select>
+
+                <input id="dropdownCheckboxButton2" data-dropdown-toggle="dropdownDefaultCheckbox" class=" password-field form-control rounded-lg" type="button" value="what days do you work">
+                <!-- <i class="ph-caret-down-fill choose-biz" style="font-size: 24px; color: #575757"></i> -->
+
+                <!-- Dropdown menu -->
+                <div id="dropdownDefaultCheckbox" class="hidden z-10 w-48 rounded divide-y divide-gray-100" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
+                    <ul class="p-3 space-y-3 text-sm text-gray-700 rounded input-form-dropdown-cat" aria-labelledby="dropdownCheckboxButton">
+                    <li>
+                        <div class="flex items-center">
+                        <input id="monday" type="checkbox" value="" class="w-4 h-4 text-black-600 bg-white rounded border-gray-500 focus:ring-blue-500 ">
+                        <label for="monday" class="ml-2 text-sm font-medium text-gray-900">Monday</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <input checked="" id="checkbox-item-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                            <label for="checkbox-item-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tuesday</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Gadgets</label>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Food</label>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Drinks</label>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Jewellery</label>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="flex items-center">
+                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
+                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Plumbing</label>
+                        </div>
+                    </li>
+                     
+                    </ul>
                 </div>
 
                 <section class="flex flex-row">
