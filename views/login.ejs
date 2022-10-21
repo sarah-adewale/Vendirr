@@ -21,6 +21,12 @@
     <link rel="stylesheet" href="/styles/custom.css">
     
     <title>This is the Homepage</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/site-icon.png"
+    />
 </head>
 <body>
     <!-- <h1 class="text-3xl">Hello World</h1> -->
@@ -76,7 +82,7 @@
                     Or
                     use your email:
                 </p>
-                
+
             </div>
             <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
