@@ -1,5 +1,5 @@
 .browse-vendors {
-    color: #2D2D2D;
+    color: #F3F3F3;
     font-family: 'Epilogue', sans-serif;
 }
 
@@ -13,9 +13,7 @@ header {
     background: url(./background.png);
 }
 
-nav {
-    border-bottom: 3px solid red;
-}
+
 
 
 
@@ -511,8 +509,8 @@ form {
 .hamburger-border {
     padding: 8px 12px;
     width: 70px;
-    height: 36px;
-    border: 1px solid #ABABAB;
+    height: 40px;
+    border: 2px solid #C0C0C0;
     border-radius: 100px;
 }
 
@@ -635,6 +633,24 @@ textarea::placeholder {
     color: #575757;
 }
 
+.ph-books,
+.ph-gender-female {
+    margin-left: 50px;
+}
+
+.ph-laptop,
+.ph-armchair {
+    margin-left: 15px;
+}
+
+.ph-cooking-pot {
+    margin-left: 30px;
+}
+
+.ph-flower-lotus {
+    margin-left: 8px;
+}
+
 .cat-dropdown-btn-text {
     font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
@@ -708,4 +724,15 @@ textarea::placeholder {
     box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.15), -8px 8px 32px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 
+}
+
+.nav-background {
+    background: #0E2528;
+}
+
+input[value] {
+    font-size: 14px;
+    color: #575757;
+    padding-left: 12px;
+    padding-top: 21px;
 }
