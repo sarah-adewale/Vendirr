@@ -4,7 +4,7 @@
 
 **Landing Page:** https://venddir.netlify.app/
 
-**Live App:** https://venddir.netlify.app/
+**Live App:** [https://venddir.cyclic.app/](https://venddir.cyclic.app/)
 
 Venddir is an online directory for vendors. As with any directory, its core function is listing - alphabetically or thematically with details such as names, addresses, and phone numbers, - all vendors who have opted to showcase their business information on the platform.
 
