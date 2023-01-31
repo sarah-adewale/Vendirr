@@ -29,16 +29,6 @@ module.exports = function (passport) {
           return done(null, false, { msg: "Invalid email or password." });
         });
       });
-
-      // passport.serializeUser((user, done) => {
-      //   done(null, user.id);
-      // });
-
-      // passport.deserializeUser((id, done) => {
-      //   User.findById(id, (err, user) => done(err, user));
-      // });
-
-  
     })
   );
   passport.serializeUser(function(user, done) {
