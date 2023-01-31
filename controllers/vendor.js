@@ -21,25 +21,6 @@ module.exports = {
     }
   },
 
-
-  // getFeed: async (req, res) => {
-  //   try {
-  //     const vendors = await Vendor.find().sort({ createdAt: "asc" }).lean(); //find and sort in descending order. lean() structures data in a specific way
-  //     res.render("feed.ejs", { vendors: vendors }); //posts is now called posts in our ejs
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // },
-
-  // getPost: async (req, res) => {
-  //   try {
-  //     const vendor = await Vendor.findById(req.params.id);
-  //   //   const comments = await Comment.find({post: req.params.id}).sort({ createdAt: "asc" }).lean(); //pjo (lean: pure javascript object)
-  //     res.render("post.ejs", { vendor: vendor, user: req.user });
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // },
   
   createVendor: async (req, res) => {
     try {
@@ -55,7 +36,6 @@ module.exports = {
         closingTime: req.body.closingTime,
         websiteLink: req.body.websiteLink,
         phoneNumber: req.body.phoneNumber,
-        // reviews: 0,
         user: req.user.id,
       });
       console.log("Vendor has been added!");
@@ -64,36 +44,6 @@ module.exports = {
       console.log(err);
     }
   },
-//   likePost: async (req, res) => {
-//     try {
-//       await Post.findOneAndUpdate(
-//         { _id: req.params.id },
-//         {
-//           $inc: { likes: 1 }, //increment by 1
-//         }
-//       );
-//       console.log("Likes +1");
-//       res.redirect(`/post/${req.params.id}`);
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   },
-//   deletePost: async (req, res) => {
-//     try {
-//       // Find post by id
-//       let post = await Post.findById({ _id: req.params.id });
-//       // Delete image from cloudinary
-//       await cloudinary.uploader.destroy(post.cloudinaryId);
-//       // Delete post from db
-//       await Post.remove({ _id: req.params.id });
-//       console.log("Deleted Post");
-//       res.redirect("/profile");
-//     } catch (err) {
-//       res.redirect("/profile");
-//     }
-//   },
-
-
 
 getVendorsignup: async (req, res) => {
   try{
