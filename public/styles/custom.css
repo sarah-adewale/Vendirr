@@ -13,10 +13,6 @@ header {
     background: url(./background.png);
 }
 
-
-
-
-
 .header-form {
     width: 483px;
     height: 77px;
@@ -735,4 +731,10 @@ input[value] {
     color: #575757;
     padding-left: 12px;
     padding-top: 21px;
+}
+
+
+.main-section {
+    /* border: 1px solid red; */
+    height: 600px;
 }
