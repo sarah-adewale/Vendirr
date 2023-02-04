@@ -11,6 +11,7 @@ header {
     width: 1441px;
     height: 402px;
     background: url(./background.png);
+
 }
 
 .header-form {
@@ -629,22 +630,22 @@ textarea::placeholder {
     color: #575757;
 }
 
-.ph-books,
-.ph-gender-female {
-    margin-left: 50px;
+.cat-text-books {
+    margin-left: 40px;
 }
 
-.ph-laptop,
-.ph-armchair {
-    margin-left: 15px;
+
+
+.ph-books {
+    margin-left: 40px;
 }
 
-.ph-cooking-pot {
-    margin-left: 30px;
+.top-rated-icon {
+    margin-top: -12px;
 }
 
-.ph-flower-lotus {
-    margin-left: 8px;
+.category-icon {
+    margin-left: 12px;
 }
 
 .cat-dropdown-btn-text {
@@ -722,6 +723,7 @@ textarea::placeholder {
 
 }
 
+
 .nav-background {
     background: #0E2528;
 }
@@ -737,4 +739,32 @@ input[value] {
 .main-section {
     /* border: 1px solid red; */
     height: 600px;
+}
+
+footer {
+    border-top: 1px solid #D5D5D5;
+}
+
+.footer-text {
+    margin-left: 65px;
+
+}
+
+.footer-text-2 {
+    margin-right: 70px;
+}
+
+footer p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #575757;
+}
+
+.footer-text-2 p>span {
+    font-weight: 400;
+    color: #2D2D2D;
 }
