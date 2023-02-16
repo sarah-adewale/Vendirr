@@ -54,7 +54,6 @@ header {
 
 input {
     border: none;
-    /* border-radius: 24px; */
     width: 100%;
 }
 
@@ -223,8 +222,6 @@ form {
     width: 1275px;
     height: 239px;
     background: #F1F1ED;
-    /* Black/20 */
-
     border: 1px solid #D5D5D5;
     border-radius: 8px;
     margin-left: 80px;
@@ -290,9 +287,6 @@ form {
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-
-    /* Black/100 */
-
     color: #2D2D2D;
     margin-top: 20px;
 }
@@ -307,7 +301,6 @@ form {
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
-    /* identical to box height */
     color: #58A942;
 }
 
@@ -326,8 +319,6 @@ form {
     font-size: 12px;
     line-height: 16px;
     margin-top: 4px;
-    /* Black/60 */
-
     color: #818181;
 }
 
@@ -375,10 +366,15 @@ form {
 }
 
 .profile-border {
-    margin-top: 80px;
-    /* margin-left: 200px; */
-    border: 1px solid #D5D5D5;
+    padding-top: 40px;
+    margin-left: 10px;
+    border-bottom: 0.5px solid #D5D5D5;
     width: 846px;
+}
+
+.profile-section {
+    height: 500px;
+    border: 1px solid rebeccapurple;
 }
 
 .profile-text {
@@ -386,18 +382,18 @@ form {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 16px;
     color: #2D2D2D;
-    /* margin-left: 200px; */
-    margin-top: 50px;
+    margin-left: 10px;
 }
+
+.profile-avatar {}
 
 .avatar-bg {
     width: 120px;
     height: 120px;
     background: #fbedef;
     border: 1px solid #48B8C6;
-    border-radius: 1e+11px;
+    border-radius: 100%;
 
 }
 
@@ -406,7 +402,8 @@ form {
 }
 
 .upload-section {
-    margin-top: -50px;
+    margin-top: 20px;
+    border: 1px solid red;
 }
 
 .upload-bg {
@@ -414,7 +411,7 @@ form {
     height: 120px;
     background: #EAEAEA;
     border: 1.71429px dashed #ABABAB;
-    border-radius: 1.71429e+10px;
+    border-radius: 100%;
 }
 
 
@@ -430,7 +427,6 @@ form {
 }
 
 .upload-icon {
-    /* margin-left: 50px; */
     margin-top: 30px;
 }
 
@@ -440,8 +436,6 @@ form {
     height: 48px;
     border: 1px solid #ABABAB;
     border-radius: 8px;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     font-family: 'Epilogue', sans-serif;
     font-style: normal;
@@ -449,13 +443,15 @@ form {
     font-size: 12px;
     line-height: 16px;
     color: #2D2D2D;
+    background: black;
 }
 
 .save-btn {
     padding: 16px 32px;
     width: 152px;
     height: 48px;
-    background: #1390A0;
+    background: black;
+    border: 1px solid red;
     box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     font-family: 'Epilogue', sans-serif;
@@ -463,10 +459,15 @@ form {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    color: #F3F3F3;
+    color: black;
+}
+
+.avatar-bg-small {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #D5D5D5;
+    border-radius: 1e+11px;
 }
 
 .create-btn {
@@ -569,6 +570,11 @@ form {
     margin-top: -5px;
 }
 
+.profile-upload-button {
+
+    margin-left: 5px;
+}
+
 a:active {
     border-bottom: 2px solid white;
     color: green;
@@ -576,7 +582,6 @@ a:active {
 
 .business-input {
     width: 834px;
-
     border: 1px solid #ABABAB;
     border-radius: 8px;
 
@@ -599,11 +604,7 @@ a:active {
     font-size: 12px;
     line-height: 16px;
     margin-right: 400px;
-
     text-align: right;
-
-    /* Primary/100 */
-
     color: #48B8C6;
 }
 
@@ -624,9 +625,6 @@ textarea::placeholder {
     line-height: 13px;
     display: flex;
     align-items: center;
-
-    /* Black/80 */
-
     color: #575757;
 }
 
@@ -653,7 +651,6 @@ textarea::placeholder {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    /* margin-left: 20px; */
     line-height: 22px;
     color: #575757;
 }
@@ -663,7 +660,6 @@ textarea::placeholder {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    /* margin-left: 20px; */
     line-height: 22px;
     color: #575757;
 }
@@ -713,11 +709,7 @@ textarea::placeholder {
 }
 
 .input-form-dropdown-cat {
-    /* width: 600px; */
     background: #F3F3F3;
-
-    /* Card */
-
     box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.15), -8px 8px 32px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 
@@ -737,7 +729,6 @@ input[value] {
 
 
 .main-section {
-    /* border: 1px solid red; */
     height: 600px;
 }
 
