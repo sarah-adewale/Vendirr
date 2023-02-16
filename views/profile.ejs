@@ -17,7 +17,7 @@
         
         <form class="space-y-6">
             <h2 class="basic-info-text">Basic Info</h2>
-            <section class="flex flex-row ">
+            <section class="flex row ">
                 <div class="">
                     <label for="firstName" class="info-label"></label>
                     <input type="text" name="firstName" id="firstName" class="name-field form-control profile-input rounded-lg " placeholder="<%= user.firstName %>" required="" disabled>
@@ -32,19 +32,91 @@
                 <label for="inputEmail" class=""></label>
                 <input type="email" name="email" id="inputEmail" class="password-field form-control profile-input rounded-lg" placeholder="<%= user.email %>" required="" disabled>
             </div>
+            <div class="profile-border"></div>
         </form>
 
         <form action="/signup" enctype="multipart/form-data" method="POST">
-            <section class="flex">
+            <section class="" style="border: 1px solid red;">
+                <p class="profile-text">Profile Photo</p>
                 <section>
-                 
+                    <section class="flex upload-section" >
+                        <div>
+                            <div class="avatar-bg profile-avatar">
+                                <img src="./images/avatar.png" alt="">
+                            </div>
+                            <div class="flex gap-3 avatar-discard-remove">
+                                <p class="avatar-discard-text">Discard</p>
+                                <span>|</span>
+                                <p class="avatar-discard-text">Remove</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="file" class="">
+                                <label for="imgUpload" class="form-label"></label>
+                                <div class="upload-bg profile-upload-button">
+                                    <i class="ph-camera upload-icon" style="font-size: 24px;"></i>
+                                    <p class="upload-text">Click or drag <br> to upload</p>
+                                </div>
+                            </button>
+                        </div>
+                        
+                    </section>
+                    <section>
+                        <p> - or choose a new avatar - </p>
+                        <ul>
+                            <li>
+                                <div class="avatar-bg-small">
+                                    <a href=""><img src="" alt=""></a>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div>
+                                    <a href=""><img src="" alt=""></a>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div>
+                                    <a href=""><img src="" alt=""></a>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div>
+                                    <a href=""><img src="" alt=""></a>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div>
+                                    <a href=""><img src="" alt=""></a>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div>
+                                    <a href=""><img src="" alt=""></a>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div>
+                                    <a href=""><img src="" alt=""></a>
+                                </div>
+                                
+                            </li>
+
+                        </ul>
+                    </section>
+                    <section class="flex row m-5">
+                        <a class="discard-btn" type="submit" style="background: red;">Discard</a>
+                        <a class="save-btn" type="submit">Save Changes</a>
+                    </section>
+                    
                 </section>
-                
-               
-                <section class="flex gap-6 save-profile-section">
-                </section>
-                
             </section>
+            
         </form>
     </section>
     
