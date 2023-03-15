@@ -1,5 +1,5 @@
-module.exports = {
-    getExplore: (req, res) => {
-        res.render('explore.ejs')
-    }
-}
+// module.exports = {
+//     getExplore: (req, res) => {
+//         res.render('explore.ejs')
+//     }
+// }

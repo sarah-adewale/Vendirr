@@ -12,7 +12,7 @@ const logger = require('morgan')
 //connect database
 const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
-const postRoutes = require("./routes/posts");
+// const postRoutes = require("./routes/posts");
 
 
 // Passport config
@@ -55,12 +55,12 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-//Use flash messages for errors, info, ect...
+// Use flash messages for errors, info, ect...
 app.use(flash());
 
 //routes
 app.use("/", mainRoutes)
-app.use("/post", postRoutes)
+// app.use("/post", postRoutes)
 
 
 
