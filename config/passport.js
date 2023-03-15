@@ -29,14 +29,6 @@ module.exports = function (passport) {
           return done(null, false, { msg: "Invalid email or password." });
         });
       });
-
-      passport.serializeUser((user, done) => {
-        done(null, user.id);
-      });
-
-      passport.deserializeUser((id, done) => {
-        User.findById(id, (err, user) => done(err, user));
-      });
     })
   );
   passport.serializeUser(function(user, done) {
@@ -51,40 +43,3 @@ module.exports = function (passport) {
 
 
 // strategy for vendor
-module.exports = function (passport) {
-  passport.use(
-    new LocalStrategy({ usernameField: "email" }, (email, password, done) => {
-      Vendor.findOne({ email: email.toLowerCase() }, (err, vendor) => {
-        if (err) {
-          return done(err);
-        }
-        if (!vendor) {
-          return done(null, false, { msg: `Email ${email} not found.` });
-        }
-        if (!vendor.password) {
-          return done(null, false, {
-            msg:
-              "Your account was registered using a sign-in provider. To enable password login, sign in using a provider, and then set a password under your user profile.",
-          });
-        }
-        vendor.comparePassword(password, (err, isMatch) => {
-          if (err) {
-            return done(err);
-          }
-          if (isMatch) {
-            return done(null, vendor);
-          }
-          return done(null, false, { msg: "Invalid email or password." });
-        });
-      });
-    })
-  );
-
-  passport.serializeUser((vendor, done) => {
-    done(null, vendor.id);
-  });
-
-  passport.deserializeUser((id, done) => {
-    Vendor.findById(id, (err, vendor) => done(err, vendor));
-  });
-};
