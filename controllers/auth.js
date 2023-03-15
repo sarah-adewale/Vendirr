@@ -1,7 +1,7 @@
 const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
-// const Vendor = require("../models/Vendor");
+
 
 exports.getLogin = (req, res) => {
   if (req.user) {
@@ -71,7 +71,7 @@ exports.logout = (req, res) => {
 
 exports.getSignup = (req, res) => {
   if (req.user) {
-    return res.redirect("/profile");
+    return res.redirect("/vendorsignup");
   }
   res.render("signup", {
     title: "Create Account",
@@ -124,9 +124,14 @@ exports.postSignup = (req, res, next) => {
           if (err) {
             return next(err);
           }
-          res.redirect("/profile");
+          res.redirect("/vendorsignup");
         });
       });
     }
   );
 };
+
+
+
+
+

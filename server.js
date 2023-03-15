@@ -2,7 +2,6 @@ const path = require('path') //core nodejs module
 const express = require('express')
 const app = express()
 const dotenv = require('dotenv')
-//const mongoose = require('mongoose')
 const passport = require('passport')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
@@ -12,7 +11,7 @@ const logger = require('morgan')
 //connect database
 const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
-// const postRoutes = require("./routes/posts");
+const vendorRoutes = require("./routes/vendor");
 
 
 // Passport config
@@ -55,12 +54,12 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Use flash messages for errors, info, ect...
+//Use flash messages for errors, info, etc...
 app.use(flash());
 
 //routes
 app.use("/", mainRoutes)
-// app.use("/post", postRoutes)
+app.use("/vendor", vendorRoutes)
 
 
 

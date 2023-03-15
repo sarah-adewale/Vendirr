@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="/css/main.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://unpkg.com/phosphor-icons"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,26 +22,30 @@
     <link rel="stylesheet" href="/styles/custom.css">
     
     <title>This is the Homepage</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/site-icon.png"
+    />
 </head>
 <body>
     <!-- <h1 class="text-3xl">Hello World</h1> -->
 
   
 
-    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 ">
+    <nav class="nav-background px-2 sm:px-4 py-2.5 sticky ">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
             <a href="/" class="flex items-center">
                 <img src="./images/Logo-main.png" alt="Venddir Logo">
-                <!-- <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
             </a>
             <div class="flex items-center md:order-2">
                 <p class="browse-vendors mr-6">Become a Vendor</p>
                 <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
-                    <!-- <img class="" src="./images/Hamburger.png" alt="user photo"> -->
                     <div class="hamburger-border">
-                        <i class="ph-list" style="color: #818181;" size="50"></i>
-                        <i class="ph-user-fill" style="color: #575757;"></i>
+                        <i class="ph-list" style="color: #EAEAEA; font-size: 18px;"></i>
+                        <i class="ph-user-fill" style="color: #F3F3F3; font-size: 18px;"></i>
                     </div>
                 </button>
                 <!-- Dropdown menu -->
@@ -69,149 +74,224 @@
             <ul class="flex gap-10">
                 <li class="category-list">
                     <div>
-                        <i class="ph-books ml-3 mb-4" style="color: #818181" :size="64" ></i>
-                        <p>Books</p>
+                        <i class="ph-books mb-4" style="color: #818181; font-size: 24px;" :size="64" ></i>
+                        <p class="cat-text cat-text-books">Books</p>
                     </div>
                 </li>
                 <li class="category-list">
                     <div>
-                       <i class="ph-laptop ml-6 mb-4" style="color: #818181"></i>
-                       <p>Computers</p> 
+                       <i class="ph-laptop mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
+                       <p class="cat-text">Gadgets</p> 
                     </div>
                 </li>
                 <li class="category-list">
                     <div class="">
                        
-                        <i class="ph-t-shirt ml-5 mb-4" style="color: #818181"></i>
-                        <p>Clothes</p>
+                        <i class="ph-t-shirt mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
+                        <p class="cat-text">Clothes</p>
                     </div>
                 </li>
                 <li class="category-list ">
                     <div>
-            
-                       <i class="ph-wine ml-4 mb-4" style="color: #818181"></i>
-                       <p>Drinks</p> 
+                       <i class="ph-armchair mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
+                       <p class="cat-text">Antiques</p> 
+                    </div>
+                </li>
+                <li class="category-list">
+                    <div>
+                       <i class="ph-wine mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
+                       <p class="cat-text cat-text-drinks">Drinks</p>
+                    </div>
+                </li>
+                <li class="category-list">
+                    <div>
+                        <i class="ph-device-mobile mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
+                        <p class="cat-text">Phones</p>
+                    </div>
+                </li>
+                <li class="category-list">
+                    
+                    <div>
+                        <i class="ph-watch mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
+                        <p class="cat-text">Jewellery</p>
                     </div>
                 </li>
                 <li class="category-list">
                     <div>
                        
-                       <i class="ph-cooking-pot ml-3 mb-4" style="color: #818181"></i>
-                       <p>Food</p>
-                    </div>
-                </li>
-                <li class="category-list">
-                    <div>
-                        
-                        <i class="ph-game-controller ml-3 mb-4" style="color: #818181"></i>
-                        <p>Gadgets</p>
-                    </div>
-                </li>
-                <li class="category-list">
-                    <div>
+                       <i class="ph-gender-female mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
+                       <p class="cat-text">Beauty</p> 
                        
-                        <i class="ph-watch ml-3 mb-4" style="color: #818181"></i>
-                        <p>Jewellery</p>
-                    </div>
-                </li>
-                <li class="category-list">
-                    <div>
-                       
-                       <i class="ph-device-mobile-camera ml-3 mb-4" style="color: #818181"></i>
-                       <p>Phones</p> 
                     </div>
                 </li>
                 <li class="category-list">
                     <div>
                     
-                       <i class="ph-toilet ml-3 mb-4" style="color: #818181"></i>
-                       <p>Plumbings</p> 
+                       <i class="ph-toilet mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
+                       <p class="cat-text">Household</p> 
                     </div>
                 </li>
                 <li class="category-list">
                     <div>
                       
-                       <i class="ph-toilet-paper ml-3 mb-4" style="color: #818181"></i>
-                       <p>Supplies</p> 
+                       <i class="ph-toilet-paper mb-4" style="color: #818181; font-size: 24px;"></i>
+                       <p class="cat-text">Supplies</p> 
+                    </div>
+                </li>
+                <li class="category-list">
+                    <div>
+                       <i class="ph-flower-lotus mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
+                       <p class="cat-text">Plants</p> 
                     </div>
                 </li>
                 <li class="category-list">
                     <div>
                        
-                       <i class="ph-wrench ml-3 mb-4" style="color: #818181"></i>
-                       <p>Tools</p> 
-                    </div>
-                </li>
-                <li class="category-list">
-                    <div>
-                       <i class="ph-fork-knife ml-3 mb-4" style="color: #818181" ></i>
-                       
-                       <p>Utensils</p> 
+                       <i class="ph-wrench ml-3 mb-4" style="color: #818181; font-size: 24px;"></i>
+                       <p class="cat-text">Tools</p> 
                     </div>
                 </li>
             </ul>
             
         </div>
     </section>
-    <section class="flex gap-2 top-rated">
-        <span><i class="ph-star-fill" style="color: yellow;"></i></span>
-        <p>Top Rated Vendors</p>
-    </section>
 
-    <ul>
-        <li>
-            <section class=" vendor-container">
-        <section class="flex second-vendor-container gap-4">
-            <!-- avatar section -->
-            <div class="vendor-avatar">
-                <img src="./images/vendor-logo.png" class="justify-center avatar-img" alt="">
-            </div>
-
-            <!-- info section -->
-            <section class="vendor-info block">
-                <div class="flex gap-2">
-                    <h2 class="vendor-name">The Burger Joint</h2>
-                    <span class="vendor-reviews"><i class="fa-solid fa-star"></i>Reviews</span>
-                </div>
-                <div class="vendor-category">
-                    <p>Food, Burger, Shakes</p> 
-                </div>
-                <div class="flex mt-2 gap-2">
-                    <span><i class="ph-map-trifold" style="color: #818181"></i></span>
-                    <a href="#"><p class="vendor-directions">Get Directions</p></a>
-                </div>
-                <div class="vendor-about">
-                    <p>Our menu features burgers that are hand crafted with 100% Angus beef. Always fresh, never frozen. We use fresh, natural <br> and delicious ingredients.</p>
-                </div>
-            </section>
-            
-            <!-- contact section -->
-            <section class="contact-section">
-                <section class="flex gap-4">
-                    <div class="icon-border">
-                        <i class="fa-solid fa-phone icon-img"></i>
-                    </div>
-                    <div class="icon-border">
-                        <i class="fa-sharp fa-solid fa-link icon-img"></i>
-                    </div>
-                    <div class="icon-border">
-                        <i class="fa-solid fa-bookmark icon-img"></i>
-                    </div>
-                </section>
-                <section >
-                    <div class="flex gap-3 mt-4">
-                        <p class="vendor-hours">Open <span class="vendor-time">till 10:30PM</span></p>
-                         
-                    </div>
-                
-                </section>
-            
-            </section>
+    <main class="main-section">
+        <section class="flex gap-2 top-rated">
+            <span><i class="ph-star-fill top-rated-icon" style="color: #F6BE4F; font-size: 20px;"></i></span>
+            <p class="top-rated-text">Top Rated Vendors</p>
         </section>
-        
-    </section>
-        </li>
-    </ul>
+
+            <section class="main-container block">
+            <ul>
+                <li>
+                    <section class=" vendor-container mb-5">
+                        <section class="flex second-vendor-container gap-4">
+                            <!-- avatar section -->
+                            <div class="vendor-avatar">
+                                <img src="./images/vendor-logo.png" class="justify-center avatar-img" alt="">
+                            </div>
+
+                            <!-- info section -->
+                            <section class="vendor-info block">
+                                <div class="flex gap-2">
+                                    <h2 class="vendor-name">The Burger Joint</h2>
+                                    <span class="vendor-reviews flex">
+                                        <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                        <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                        <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                        <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                        <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                        
+                                         Reviews
+                                    </span>
+                                </div>
+                                <div class="vendor-category">
+                                    <p>Food, Burger, Shakes</p> 
+                                </div>
+                                <div class="flex mt-2 gap-2">
+                                    <span><i class="ph-map-trifold" style="color: #818181"></i></span>
+                                    <a href="/signup"><p class="vendor-directions">Get Directions</p></a>
+                                </div>
+                                <div class="vendor-about">
+                                    <p>Our menu features burgers that are hand crafted with 100% Angus beef. Always fresh, never frozen. We use fresh, natural <br> and delicious ingredients.</p>
+                                </div>
+                            </section>
+
+                            <!-- contact section -->
+                            <section class="contact-section">
+                                <section class="flex gap-4">
+                                    <div class="icon-border">
+                                        <a href="/signup"> <i class="ph-phone-fill icon-img"></i></a>
+                                    </div>
+                                    <div class="icon-border">
+                                        <a href="/signup"> <i class="ph-link-fill icon-img"></i></a>
+                                    </div>
+                                    <div class="icon-border">
+                                    <a href="/signup"> <i class="ph-bookmark-simple-fill icon-img"></i></a>
+                                    </div>
+                                </section>
+                                <section >
+                                    <div class="flex gap-3 mt-4">
+                                        <p class="vendor-hours">Open <span class="vendor-time">till 10:30PM</span></p>
+                                        
+                                    </div>
+                                
+                                </section>
+                            
+                            </section>
+                        </section>
+                
+                    </section>
+                </li>
+            </ul>
+
+
+            <ul>
+                <li>
+                    <section class=" vendor-container">
+                        <section class="flex second-vendor-container gap-4">
+                            <!-- avatar section -->
+                            <div class="vendor-avatar">
+                                <img src="./images/vendor-logo.png" class="justify-center avatar-img" alt="">
+                            </div>
+
+                            <!-- info section -->
+                            <section class="vendor-info block">
+                                <div class="flex gap-2">
+                                    <h2 class="vendor-name">The Burger Joint</h2>
+                                    <span class="vendor-reviews flex">
+                                        <i class="fa-solid fa-star" style="color: #F6BE4F; font-size: 14px;"></i>
+                                        <i class="fa-solid fa-star" style="color: #F6BE4F; font-size: 14px;"></i>
+                                        <i class="fa-solid fa-star" style="color: #F6BE4F; font-size: 14px;"></i>
+                                        <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                        <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                        Reviews
+                                    </span>
+                                </div>
+                                <div class="vendor-category">
+                                    <p>Food, Burger, Shakes</p> 
+                                </div>
+                                <div class="flex mt-2 gap-2">
+                                    <span><i class="ph-map-trifold" style="color: #818181"></i></span>
+                                    <a href="/signup"><p class="vendor-directions">Get Directions</p></a>
+                                </div>
+                                <div class="vendor-about">
+                                    <p>Our menu features burgers that are hand crafted with 100% Angus beef. Always fresh, never frozen. We use fresh, natural <br> and delicious ingredients.</p>
+                                </div>
+                            </section>
+
+                            <!-- contact section -->
+                            <section class="contact-section">
+                                <section class="flex gap-4">
+                                    <div class="icon-border">
+                                        <a href="/signup"> <i class="ph-phone-fill icon-img"></i></a>
+                                    </div>
+                                    <div class="icon-border">
+                                        <a href="/signup"> <i class="ph-link-fill icon-img"></i></a>
+                                    </div>
+                                    <div class="icon-border">
+                                    <a href="/signup"> <i class="ph-bookmark-simple-fill icon-img"></i></a>
+                                    </div>
+                                </section>
+                                <section >
+                                    <div class="flex gap-3 mt-4">
+                                        <p class="vendor-hours">Open <span class="vendor-time">till 10:30PM</span></p>
+                                        
+                                    </div>
+                                
+                                </section>
+                            
+                            </section>
+                        </section>
+                
+                    </section>
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+    
     
 
 
