@@ -403,7 +403,7 @@ form {
 
 .upload-section {
     margin-top: 20px;
-    border: 1px solid red;
+
 }
 
 .upload-bg {
@@ -443,15 +443,13 @@ form {
     font-size: 12px;
     line-height: 16px;
     color: #2D2D2D;
-    background: black;
 }
 
 .save-btn {
     padding: 16px 32px;
     width: 152px;
     height: 48px;
-    background: black;
-    border: 1px solid red;
+    background: #1390A0 !important;
     box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     font-family: 'Epilogue', sans-serif;
@@ -460,7 +458,7 @@ form {
     font-size: 12px;
     line-height: 16px;
     text-align: center;
-    color: black;
+    color: #F3F3F3;
 }
 
 .avatar-bg-small {
@@ -468,6 +466,19 @@ form {
     height: 42px;
     border: 1px solid #D5D5D5;
     border-radius: 1e+11px;
+}
+
+.avatar-section-text {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    color: #818181;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 
 .create-btn {
@@ -632,10 +643,8 @@ textarea::placeholder {
     margin-left: 40px;
 }
 
-
-
 .ph-books {
-    margin-left: 40px;
+    margin-left: 48px;
 }
 
 .top-rated-icon {
@@ -645,6 +654,19 @@ textarea::placeholder {
 .category-icon {
     margin-left: 12px;
 }
+
+.ph-wine,
+.ph-gender-female,
+.ph-toilet-paper,
+.ph-flower-lotus {
+    margin-left: 6px;
+}
+
+.ph-toilet {
+    margin-left: 16px;
+}
+
+.ph-toilet-paper {}
 
 .cat-dropdown-btn-text {
     font-family: 'Nunito Sans', sans-serif;
@@ -758,4 +780,8 @@ footer p {
 .footer-text-2 p>span {
     font-weight: 400;
     color: #2D2D2D;
+}
+
+.btn-section {
+    margin-left: 555px;
 }
