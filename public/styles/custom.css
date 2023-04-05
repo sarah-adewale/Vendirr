@@ -11,7 +11,12 @@ header {
     width: 1441px;
     height: 402px;
     background: url(./background.png);
+}
 
+nav {
+    position: fixed !important;
+    width: 1441px;
+    z-index: 1000;
 }
 
 .header-form {
