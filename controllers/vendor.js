@@ -21,25 +21,40 @@ module.exports = {
     }
   },
 
-  
+  getVendor: async (req, res) => {
+    try {
+      const vendor = await Vendor.findById(req.params.id);
+      res.render("vendor.ejs", { vendor: vendor, user: req.user});
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
   createVendor: async (req, res) => {
     try {
       // Upload image to cloudinary
       const result = await cloudinary.uploader.upload(req.file.path);
 
       await Vendor.create({
-        vendorName: req.body.vendorName,
         image: result.secure_url,
         cloudinaryId: result.public_id,
-        about: req.body.about,
-        address: req.body.address,
-        closingTime: req.body.closingTime,
-        websiteLink: req.body.websiteLink,
+        businessName: req.body.businessName,
+        businessEmail: req.body.businessEmail,
         phoneNumber: req.body.phoneNumber,
+        websiteLink: req.body.websiteLink,
+        streetAddress: req.body.streetAddress,
+        state: req.body.state,
+        city: req.body.city,
+        businessCategory: req.body.businessCategory,
+        businessDetail: req.body.businessDetail,
+        workDays: req.body.workDays,
+        openTime: req.body.openTime,
+        closeTime: req.body.closeTime,
         user: req.user.id,
       });
+
       console.log("Vendor has been added!");
-      res.redirect("/vendorprofile");
+      res.redirect("/businessprofile");
     } catch (err) {
       console.log(err);
     }

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/styles/tailwind.css">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/custom.css">
+
     
     <title>This is the Homepage</title>
     <link
@@ -29,253 +30,149 @@
 </head>
 <body>
     <nav class="nav-background px-2 sm:px-4 py-2.5 ">
-    <div class="container flex flex-wrap justify-between items-center mx-auto">
-    <a href="/" class="flex items-center">
-        <img src="./images/Logo-main.png" alt="Venddir Logo">
-      
-    </a>
-    <div class="flex items-center md:order-2">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="/" class="flex items-center">
+                <img src="./images/Logo-main.png" alt="Venddir Logo">
+            
+            </a>
+            <div class="flex items-center md:order-2">
         
-        <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-            <span class="sr-only">Open user menu</span>
-            <div class="hamburger-border">
-                <i class="ph-list" style="color: #EAEAEA; font-size: 18px;"></i>
-                <i class="ph-user-fill" style="color: #F3F3F3; font-size: 18px;"></i>
+                <button type="button" class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                    <span class="sr-only">Open user menu</span>
+                    <div class="hamburger-border">
+                        <i class="ph-list" style="color: #EAEAEA; font-size: 18px;"></i>
+                        <i class="ph-user-fill" style="color: #F3F3F3; font-size: 18px;"></i>
+                    </div>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow " id="user-dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 477px);">
+                
+                    <ul class="py-1" aria-labelledby="user-menu-button">
+                        <li>
+                            <a href="/signup" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Sign up</a>
+                        </li>
+                    
+                        <li>
+                            <a href="/login" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Login</a>
+                        </li>
+                    
+                    </ul>
+                </div> 
+
             </div>
-        </button>
-        <!-- Dropdown menu -->
-        <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow " id="user-dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 477px);">
-        
-        <ul class="py-1" aria-labelledby="user-menu-button">
-             <li>
-                <a href="/signup" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Sign up</a>
-            </li>
-           
-            <li>
-                <a href="/login" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Login</a>
-            </li>
-        
-        </ul>
+
         </div>
-
-    </div>
-
-    </div>
     </nav>
 
 
-<div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-  <div class="w-full max-w-md space-y-8">
-    <div>
-      
-      <h2 class="signin-text text-center text-3xl font-light tracking-tight">Just a few details</h2>
-      <p class="text-center signin-text-three mt-2">Let us know how you’d like people to reach you</p>
-      
+    <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mb-16">
+        <div class="w-full max-w-md space-y-8">
+            <div class="mt-20">
+            
+                <h2 class="signin-text text-center text-3xl font-light tracking-tight" id="test">Just a few details</h2>
+                <p class="text-center signin-text-three mt-2">Let us know how you’d like people to reach you</p>
+                
+            </div>
+
+            <section>
+             
+                <form class="" action="/vendor/createVendor" enctype="multipart/form-data" method="POST">
+                    <h2 class=" business-logo-text create-biz-text">Business Logo</h2>
+
+                    <section class="flex gap-6 business-info biz-avatar">
+
+                        <!-- hidden by default -->
+                        <div class="avatar-bg mt-1.5">
+                            <img class="image-preview" id="imagePreview" width="120" height="120" style="display: none;">
+                             <p onclick="removeImage()" style="display: none;" class="remove avatar-discard-text mt-3.5 remove-text">Remove</p>
+                       
+                        </div>
+                        <!-- hidden by default -->
+
+                        <label class="custom-file-upload upload-text" for="fileUpload">
+                            <input type="file" id="fileUpload" name="file" onchange="displayImage()"/>
+                            <i class="ph-camera upload-icon" style="font-size: 24px;"></i>
+                            <p class="mt-2">Click or drag <br> to upload</p>
+                        </label>
+                        
+                    </section>
+
+                    <section class="space-y-6 biz-input-layer">
+                         <div class=" email-field">
+                            <label for="businessName" class=""></label>
+                            <input type="text" name="businessName" id="businessName" class="password-field form-control rounded-lg" placeholder="Business Name" required="">
+                        </div>
+                        <div class=" email-field">
+                            <label for="businessEmail" class=""></label>
+                            <input type="text" name="businessEmail" id="businessEmail" class="password-field form-control rounded-lg" placeholder="Business Email" required="">
+                        </div>
+                        <div class=" email-field">
+                            <label for="phoneNumber" class=""></label>
+                            <input type="text" name="phoneNumber" id="phoneNumber" class="password-field form-control rounded-lg" placeholder="Contact Number" required="">
+                        </div>
+                    
+                        <div class=" email-field">
+                            <label for="websiteLink" class=""></label>
+                            <input type="text" name="websiteLink" id="websiteLink" class="password-field form-control rounded-lg" placeholder="Website Link" required="">
+                        </div>
+                        <section class="block">
+                            <div class=" email-field">
+                                <label for="streetAddress" class=""></label>
+                                <input type="text" name="streetAddress" id="streetAddress" placeholder="Street Address" class="password-field form-control rounded-lg" required="">
+                            </div>
+                            <div class=" email-field">
+                                <label for="state" class=""></label>
+                                <input type="text" name="state" id="state" placeholder="State" class="password-field form-control rounded-lg" required="">
+                            </div>
+                            <div class=" email-field">
+                                <label for="city" class=""></label>
+                                <input type="text" name="city" id="city" placeholder="City" class="password-field form-control rounded-lg" required="">
+                            </div>
+                        </section>
+
+                        <div class=" email-field">
+                            <label for="businessCategory" class=""></label>
+                            <input type="text" name="businessCategory" id="businessCategory" class="password-field form-control rounded-lg" placeholder="Business Category" required="">
+                        </div>
+
+                        <div>
+                            <label for="businessDetail"></label>
+                            <textarea name="businessDetail" id="businessDetail" cols="20" rows="10" placeholder="Tell us about your business" class="business-input business-caption biz-text-area"></textarea>
+                            <p class="input-footnote input-footnote-2">250 words</p>
+                        </div>
+
+                           <div class="options">
+                            <label for="workDays"></label>
+                            <select name="workDays" id="workDays" class="password-field form-control rounded-lg">
+                                <option value=""  disabled selected>What days do you work</option>
+                                <option value="1" name="workDays">Weekdays</option>
+                                <option value="2" name="workDays">Weekends</option>
+                                <option value="3" name="workDays">Everyday</option>
+                            </select>
+                        </div>
+
+                        <section class="flex flex-row">
+                            <div class="">
+                                <label for="openTime" class=""></label>
+                                <input type="text" name="openTime" id="openTime" class="name-field form-control rounded-lg " placeholder="Open at" required="">
+                            </div>
+                            <div class="">
+                                <label for="closeTime" class=""></label>
+                                <input type="text" name="closeTime" id="closeTime" class="name-field form-control rounded-lg" placeholder="Close at" required="">
+                            </div>
+                        </section>
+                    
+                        <button type="submit" class="signup-button" value="Upload">Complete Signup</button>
+                    
+                    </section>
+                    
+                </form>
+            </section>
+                
+        </div>
     </div>
-
-    <section>
-        <% if (locals.messages.errors) { %>
-                    <% messages.errors.forEach( el => { %>
-                        <div class=""><%= el.msg %></div>
-                    <% }) %>    
-                <% } %> 
-                <% if (locals.messages.info) { %>
-                    <% messages.info.forEach( el => { %>
-                        <div class=""><%= el.msg %></div>
-                    <% }) %>    
-                <% } %>
-        <form class="" action="/vendorsignup" method="POST">
-            <h2 class=" business-logo-text create-biz-text">Business Logo</h2>
-
-            <section class="flex gap-6 business-info biz-avatar" >
-                <div class="avatar-bg block ">
-                    <img src="./images/avatar.png" alt="">
-                    <div class="flex gap-3 avatar-discard-remove">
-                        <p class="avatar-discard-text remove-text">Remove</p>
-                    </div>
-                </div>
-                <button type="file" class="upload-section upload-button">
-                    <label for="imgUpload" class="form-label"></label>
-                    <div class="upload-bg">
-                        <i class="ph-camera upload-icon"></i>
-                        <p class="upload-text">Click or drag <br> to upload</p>
-                    </div>
-                </button>
-            </section>
-
-            <section class="space-y-6 biz-input-layer">
-                 <div class=" email-field">
-                    <label for="inputEmail" class=""></label>
-                    <input type="text" name="email" id="inputEmail" class="password-field form-control rounded-lg" placeholder="Business Name" required="">
-                </div>
-                 <div class=" email-field">
-                    <label for="inputEmail" class=""></label>
-                    <input type="text" name="email" id="inputEmail" class="password-field form-control rounded-lg" placeholder="Contact Number" required="">
-                </div>
-            
-                <div class=" email-field">
-                    <label for="inputEmail" class=""></label>
-                    <input type="text" name="email" id="inputEmail" class="password-field form-control rounded-lg" placeholder="Website Link" required="">
-                </div>
-                <section class="block">
-                    <div class=" email-field">
-                        <label for="password" class=""></label>
-                        <input type="text" name="password" id="password" placeholder="Street Address" class="password-field form-control rounded-lg" required="">
-                    </div>
-                    <div class=" email-field">
-                        <label for="confirmPassword" class=""></label>
-                        <input type="text" name="confirmPassword" id="confirmPassword" placeholder="State" class="password-field form-control rounded-lg" required="">
-                    </div>
-                    <div class=" email-field">
-                        <label for="confirmPassword" class=""></label>
-                        <input type="text" name="confirmPassword" id="confirmPassword" placeholder="City" class="password-field form-control rounded-lg" required="">
-                    </div>
-                </section>
-               
-                <input id="dropdownCheckboxButton" data-dropdown-toggle="dropdownDefaultCheckbox" class=" password-field form-control rounded-lg" type="button" value="Business Category">
-              
-
-                <!-- Dropdown menu -->
-                <div id="dropdownDefaultCheckbox" class="hidden z-10 w-48 rounded divide-y divide-gray-100" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
-                    <ul class="p-3 space-y-3 text-sm text-gray-700 rounded input-form-dropdown-cat" aria-labelledby="dropdownCheckboxButton">
-                    <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-1" type="checkbox" value="" class="w-4 h-4 text-black-600 bg-white rounded border-gray-500 focus:ring-blue-500 ">
-                        <label for="checkbox-item-1" class="ml-2 text-sm font-medium text-gray-900">Clothes</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center">
-                            <input checked="" id="checkbox-item-2" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                            <label for="checkbox-item-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Books</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Gadgets</label>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Food</label>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Drinks</label>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Jewellery</label>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Plumbing</label>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Supplies</label>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-3" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                        <label for="checkbox-item-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Household Items</label>
-                        </div>
-                    </li>
-                    </ul>
-                </div>
-
-
-                <div>
-                    <textarea name="" id="" cols="20" rows="10" placeholder="Tell us about your business" class="business-input business-caption biz-text-area"></textarea>
-                    <p class="input-footnote">250 words</p>
-                </div>
-
-                <input id="dropdownCheckboxButton2" data-dropdown-toggle="dropdownDefaultCheckbox2" class=" check-value password-field form-control rounded-lg" type="button" value="What days do you work">
-               
-
-                <!-- Dropdown menu -->
-                <div id="dropdownDefaultCheckbox2" class="hidden z-10 w-48 rounded divide-y divide-gray-100" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 10px);">
-                    <ul class="p-3 space-y-3 text-sm text-gray-700 rounded input-form-dropdown-cat" aria-labelledby="dropdownCheckboxButton">
-                    <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-4" type="checkbox" value="" class="w-4 h-4 text-black-600 bg-white rounded border-gray-500 focus:ring-blue-500 ">
-                        <label for="checkbox-item-4" class="ml-2 text-sm font-medium text-gray-900">Monday</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center">
-                            <input checked="" id="checkbox-item-4" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                            <label for="checkbox-item-4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tuesday</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-4" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                        <label for="checkbox-item-4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Wednesday</label>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-4" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                        <label for="checkbox-item-4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Thursday</label>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-4" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                        <label for="checkbox-item-4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Friday</label>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-4" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                        <label for="checkbox-item-4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Saturday</label>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="flex items-center">
-                        <input id="checkbox-item-4" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-white rounded border-gray-300 focus:ring-blue-500 ">
-                        <label for="checkbox-item-4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sunday</label>
-                        </div>
-                    </li>
-                     
-                    </ul>
-                </div>
-
-                <section class="flex flex-row">
-                    <div class="">
-                        <label for="firstName" class=""></label>
-                        <input type="time" name="firstName" id="firstName" class="name-field form-control rounded-lg " placeholder="12:00am" required="">
-                    </div>
-                    <div class="">
-                        <label for="lastName" class=""></label>
-                        <input type="time" name="lastName" id="lastName" class="name-field form-control rounded-lg" value="12:00am" >
-                    </div>
-                </section>
-
-              
-            
-                <button type="submit" class="signup-button">Complete Signup</button>
-               
-            </section>
-            
-        </form>
-    </section>
-        
-  </div>
-</div>
-
+    <script src="/main.js"></script>
+</body>
 
 
 
