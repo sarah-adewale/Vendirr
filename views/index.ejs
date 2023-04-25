@@ -164,18 +164,19 @@
 
             <section class="main-container block">
             <ul>
+                <% for(var i=0; i<vendors.length; i++) {%>
                 <li>
                     <section class=" vendor-container mb-5">
                         <section class="flex second-vendor-container gap-4">
                             <!-- avatar section -->
                             <div class="vendor-avatar">
-                                <img src="./images/vendor-logo.png" class="justify-center avatar-img" alt="">
+                                <img src="<%= vendors[i].image%>" class="justify-center avatar-img" alt="">
                             </div>
 
                             <!-- info section -->
                             <section class="vendor-info block">
                                 <div class="flex gap-2">
-                                    <h2 class="vendor-name">The Burger Joint</h2>
+                                    <h2 class="vendor-name"><%= vendors[i].businessName%></h2>
                                     <span class="vendor-reviews flex">
                                         <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
                                         <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
@@ -224,6 +225,7 @@
                 
                     </section>
                 </li>
+                <% } %>
             </ul>
 
 

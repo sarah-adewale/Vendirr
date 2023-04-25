@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
 
 const VendorSchema = new mongoose.Schema({
-  vendorName: {
-    type: String,
-    required: true,
-  },
+
   image: {
     type: String,
     require: true,
@@ -13,19 +10,11 @@ const VendorSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  about: {
+  businessName: {
     type: String,
     required: true,
   },
-  address: {
-    type: String,
-    required: true,
-  },
-  closingTime: {
-    type: String,
-    required: true,
-  },
-  websiteLink: {
+  businessEmail: {
     type: String,
     required: true,
   },
@@ -33,7 +22,42 @@ const VendorSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  
+  websiteLink: {
+    type: String,
+    required: true,
+  },
+  streetAddress: {
+    type: String,
+    required: true,
+  },
+  state: {
+    type: String,
+    required: true,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+  businessCategory: {
+    type: String,
+    required: true,
+  },
+  businessDetail: {
+    type: String,
+    required: true,
+  },
+  workDays: {
+    type: String,
+    required: true,
+  },
+  openTime: {
+    type: String,
+    required: true,
+  },
+  closeTime: {
+    type: String,
+    required: true,
+  },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
