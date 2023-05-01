@@ -1,5 +1,3 @@
-const copyTextareaBtn = document.querySelector('#copy-btn');
-
 
 function displayImage() {
   const file = document.getElementById("fileUpload").files[0];
@@ -25,16 +23,19 @@ function removeImage(){
 
 }
 
-copyTextareaBtn.addEventListener('click', function(event) {
-  var copyTextarea = document.querySelector('#text-to-copy');
-  copyTextarea.focus();
-  copyTextarea.select();
+const copyTextareaBtn = document.querySelector('.js-textareacopybtn');
 
-  try {
-    var successful = document.execCommand('copy');
-    var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Copying text command was ' + msg);
-  } catch (err) {
-    console.log('Oops, unable to copy');
-  }
-});
+        copyTextareaBtn.addEventListener('click', (event) => {
+            const copyTextarea = document.querySelector('.js-copytextarea');
+            copyTextarea.focus();
+            copyTextarea.select();
+
+            try {
+                const successful = document.execCommand('copy');
+                const msg = successful ? 'successful' : 'unsuccessful';
+                console.log('Copying text command was ' + msg);
+            } catch (err) {
+                    console.log('Oops, unable to copy');
+                }
+
+        });

@@ -42,6 +42,10 @@ const VendorSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  subCategory: {
+    type: String,
+    required: true,
+  },
   businessDetail: {
     type: String,
     required: true,
