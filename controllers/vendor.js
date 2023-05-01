@@ -46,6 +46,7 @@ module.exports = {
         state: req.body.state,
         city: req.body.city,
         businessCategory: req.body.businessCategory,
+        subCategory: req.body.subCategory,
         businessDetail: req.body.businessDetail,
         workDays: req.body.workDays,
         openTime: req.body.openTime,

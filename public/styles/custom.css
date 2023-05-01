@@ -20,8 +20,8 @@ nav {
 }
 
 .header-form {
-    width: 483px;
-    height: 77px;
+    width: 887px;
+    height: 78px;
     background: #EDF8F9;
     border-radius: 24px;
     border: none;
@@ -37,7 +37,7 @@ nav {
     background: #2B6E77;
     border-radius: 24px;
     color: #f3f3f3;
-    margin-left: -60px;
+
 }
 
 .input-left {
@@ -200,9 +200,6 @@ form {
     margin-top: 70px;
 }
 
-.search-input {
-    border-radius: 0px 30px 30px 0px;
-}
 
 .category-container {
     height: 100px;
@@ -218,6 +215,8 @@ form {
     line-height: 13px;
     align-items: center;
 }
+
+
 
 .top-rated {
     margin: 0 0 20px 80px;
@@ -285,7 +284,18 @@ form {
     font-size: 16px;
     line-height: 22px;
     color: #575757;
+    background: none;
+    width: 300px;
 
+}
+
+
+.copy-btn {
+    margin-top: -15px;
+}
+
+li {
+    list-style: none;
 }
 
 .vendor-about {
@@ -598,6 +608,8 @@ input[type="file"] {
 
 .input-icons i {
     position: absolute;
+    top: 31px;
+    left: 19px;
 }
 
 .form-height {
@@ -826,7 +838,9 @@ input[value] {
     padding-top: 21px;
 }
 
-
+.main-container {
+    margin-top: 25px;
+}
 
 footer {
     border-top: 1px solid #D5D5D5;
@@ -859,4 +873,18 @@ footer p {
 
 .btn-section {
     margin-left: 555px;
+}
+
+textarea,
+textarea:focus {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none;
+    /*remove the resize handle on the bottom right*/
 }
