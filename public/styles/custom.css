@@ -119,7 +119,26 @@ select:focus {
     border-radius: 8px;
     color: #F3F3F3;
     font-family: 'Epilogue', sans-serif;
-    margin-left: 12px;
+    /* margin-left: 12px; */
+}
+
+.signup-button-2 {
+    margin-right: 20px !important;
+}
+
+.dashboard-text {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #2B6E77;
+    margin-left: 40px;
+}
+
+.welcome-btn {
+    width: 413px;
+    height: 48px;
 }
 
 .google-button {

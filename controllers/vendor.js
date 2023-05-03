@@ -55,7 +55,7 @@ module.exports = {
       });
 
       console.log("Vendor has been added!");
-      res.redirect("/businessprofile");
+      res.redirect("/welcomepage");
     } catch (err) {
       console.log(err);
     }
@@ -64,6 +64,15 @@ module.exports = {
 getVendorsignup: async (req, res) => {
   try{
     res.render("vendorsignup.ejs");
+  }catch (err) {
+      console.log(err);
+    }
+  
+},
+
+getWelcomepage: async (req, res) => {
+  try{
+    res.render("welcomepage.ejs");
   }catch (err) {
       console.log(err);
     }
