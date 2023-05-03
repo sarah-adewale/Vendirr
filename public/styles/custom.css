@@ -8,14 +8,14 @@ body {
 }
 
 header {
-    width: 1441px;
+    width: 100%;
     height: 402px;
     background: url(./background.png);
 }
 
 nav {
     position: fixed !important;
-    width: 1441px;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -357,7 +357,7 @@ li {
 }
 
 .profile-background {
-    width: 1440px;
+    width: 100%;
     height: 164px;
     background: url(./profile-background.png);
 }
@@ -590,6 +590,27 @@ input[type="file"] {
     height: 40px;
     border: 2px solid #C0C0C0;
     border-radius: 100px;
+}
+
+.hamburger-logged-in {
+    background: #91D4DD;
+    border: 3px solid #48B8C6;
+}
+
+.profile-border-2 {
+    border: 2px solid #48B8C6;
+    border-radius: 1e+11px;
+    right: 25px;
+    margin-top: -31px;
+    width: 28px;
+    height: 28px;
+    margin-right: 55px;
+}
+
+.list-icon {
+    margin-left: -32px;
+
+
 }
 
 .signin-text-three {
@@ -829,6 +850,10 @@ textarea::placeholder {
 
 .nav-background {
     background: #0E2528;
+}
+
+.nav-background-2 {
+    background: #F3F3F3;
 }
 
 input[value] {
