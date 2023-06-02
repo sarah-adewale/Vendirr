@@ -1,4 +1,3 @@
-
 const Vendor = require("../models/Vendor");
 
 module.exports = {
@@ -13,3 +12,4 @@ module.exports = {
     }
 
 }
+

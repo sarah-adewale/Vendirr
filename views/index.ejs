@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="/css/main.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -162,10 +161,10 @@
             <p class="top-rated-text">Top Rated Vendors</p>
         </section>
 
-            <section class="main-container block">
+        <section class="main-container block mt-5">
             <ul>
                 <% for(var i=0; i<vendors.length; i++) {%>
-                <li>
+                <li class="mb-9">
                     <section class=" vendor-container mb-5">
                         <section class="flex second-vendor-container gap-4">
                             <!-- avatar section -->
@@ -190,12 +189,11 @@
                                         </span>
                                     </div>
                                     <div class="vendor-category">
-                                        <p><%= vendors[i].businessCategory + ', ' + vendors[i].subCategory %></p> 
+                                        <p><%= vendors[i].businessCategory + ', ' + vendors[i].subCategory%></p> 
                                     </div>
-                                    <div class="flex mt-2 gap-2">
-                                        <textarea class="js-copytextarea vendor-directions"><%= vendors[i].streetAddress + ', ' + vendors[i].city + ', ' + vendors[i].state%></textarea>
+                                    <div class="flex mt-2 vendor-address">   
+                                            <textarea class="js-copytextarea vendor-directions"><%= vendors[i].streetAddress + ', ' + vendors[i].city + ', ' + vendors[i].state%></textarea>
                                             <button class="js-textareacopybtn copy-btn"><span><i class="ph-fill ph-copy" style="color: #48B8C6;"></i></span></button>
-                                        
                                     </div>
                                     <div class="vendor-about">
                                         <p><%= vendors[i].businessDetail %> <br></p>
@@ -232,11 +230,10 @@
                 </li>
             </ul>
             <% } %>
+
         </section>
     </main>
-    
-    
-    
+    <script src="/main.js"></script>
 
 
 
