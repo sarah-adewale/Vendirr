@@ -62,6 +62,11 @@ input {
     background: none;
 }
 
+input[type="text"] {
+    padding: 50px;
+    /* Adjust the padding value as needed */
+}
+
 #input-field {
     margin: 80px 0 0 200px;
 
