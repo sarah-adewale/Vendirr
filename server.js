@@ -16,6 +16,7 @@ const vendorRoutes = require("./routes/vendor");
 
 // Passport config
 require("./config/passport")(passport);
+
 // load config file
 dotenv.config({ path: './config/.env' })
 
