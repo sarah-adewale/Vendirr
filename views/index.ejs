@@ -163,20 +163,20 @@
 
         <section class="main-container block mt-5">
             <ul>
-                <% for(var i=0; i<vendors.length; i++) {%>
+               
                 <li class="mb-9">
                     <section class=" vendor-container mb-5">
                         <section class="flex second-vendor-container gap-4">
                             <!-- avatar section -->
                             <div class="vendor-avatar">
-                                <img src="<%= vendors[i].image%>" class="justify-center avatar-img" alt="">
+                                <img src="./images/coffee-fill.png" class="justify-center avatar-img" alt="">
                             </div>
 
                             <!-- info section -->
                             <section class="vendor-detail-container">
                                 <section class="vendor-info block">
                                     <div class="flex gap-2">
-                                        <h2 class="vendor-name"><%= vendors[i].businessName.charAt(0).toUpperCase() + vendors[i].businessName.slice(1)%></h2>
+                                        <h2 class="vendor-name">MugsCo</h2>
 
                                         <span class="vendor-reviews flex">
                                             <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
@@ -189,14 +189,14 @@
                                         </span>
                                     </div>
                                     <div class="vendor-category">
-                                        <p><%= vendors[i].businessCategory + ', ' + vendors[i].subCategory%></p> 
+                                        <p>kitchen utensils, mugs</p> 
                                     </div>
                                     <div class="flex mt-2 vendor-address">   
-                                            <textarea class="js-copytextarea vendor-directions"><%= vendors[i].streetAddress + ', ' + vendors[i].city + ', ' + vendors[i].state%></textarea>
+                                            <textarea class="js-copytextarea vendor-directions">4, Authority Avenue, Ikotun, Egbe, Lagos State</textarea>
                                             <button class="js-textareacopybtn copy-btn"><span><i class="ph-fill ph-copy" style="color: #48B8C6;"></i></span></button>
                                     </div>
                                     <div class="vendor-about">
-                                        <p><%= vendors[i].businessDetail %> <br></p>
+                                        <p>We specialize in the production and distribution of kitchen materials. We use  <br>purely sourced raw material in our production. Reach out to us let's help put a smile on your face.</p>
                                     </div>
                                 </section>
 
@@ -204,10 +204,10 @@
                                 <section class="contact-section">
                                     <section class="flex gap-4">
                                         <div class="icon-border">
-                                            <a href="tel:<%= vendors[i].phoneNumber%>"> <i class="ph-phone-fill icon-img"></i></a>
+                                            <a href="#"> <i class="ph-phone-fill icon-img"></i></a>
                                         </div>
                                         <div class="icon-border">
-                                            <a href="https://<%= vendors[i].websiteLink%>" target="_blank"> <i class="ph-link-fill icon-img"></i></a>
+                                            <a href="#" target="_blank"> <i class="ph-link-fill icon-img"></i></a>
                                         </div>
                                         <div class="icon-border">
                                         <a href="#"> <i class="ph-bookmark-simple-fill icon-img"></i></a>
@@ -215,7 +215,7 @@
                                     </section>
                                     <section >
                                         <div class="flex gap-3 mt-4">
-                                            <p class="vendor-hours">Open <span class="vendor-time"> till <%= vendors[i].closeTime%></span></p>
+                                            <p class="vendor-hours">Open <span class="vendor-time"> till 10:30</span></p>
                                             
                                         </div>
                                     
@@ -229,7 +229,143 @@
                     </section>
                 </li>
             </ul>
-            <% } %>
+
+            <ul>
+               
+                <li class="mb-9">
+                    <section class=" vendor-container mb-5">
+                        <section class="flex second-vendor-container gap-4">
+                            <!-- avatar section -->
+                            <div class="vendor-avatar">
+                                <img src="./images/watch-fill.png" class="justify-center avatar-img" alt="">
+                            </div>
+
+                            <!-- info section -->
+                            <section class="vendor-detail-container">
+                                <section class="vendor-info block">
+                                    <div class="flex gap-2">
+                                        <h2 class="vendor-name">Olaa</h2>
+
+                                        <span class="vendor-reviews flex">
+                                            <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                            <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                            <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                            <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                            <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i> 
+                                            
+                                             Reviews
+                                        </span>
+                                    </div>
+                                    <div class="vendor-category">
+                                        <p>Jewellery, Accessories</p> 
+                                    </div>
+                                    <div class="flex mt-2 vendor-address">   
+                                            <textarea class="js-copytextarea vendor-directions">24, Eletu Odibo. Abule Ijesha. Yaba, Lagos.</textarea>
+                                            <button class="js-textareacopybtn copy-btn"><span><i class="ph-fill ph-copy" style="color: #48B8C6;"></i></span></button>
+                                    </div>
+                                    <div class="vendor-about">
+                                        <p>Olaa is an online business that specializes in the sale of real authentic jewelry.  <br> We delivery worldwide.</p>
+                                    </div>
+                                </section>
+
+                                <!-- contact section -->
+                                <section class="contact-section">
+                                    <section class="flex gap-4">
+                                        <div class="icon-border">
+                                            <a href="#"> <i class="ph-phone-fill icon-img"></i></a>
+                                        </div>
+                                        <div class="icon-border">
+                                            <a href="#" target="_blank"> <i class="ph-link-fill icon-img"></i></a>
+                                        </div>
+                                        <div class="icon-border">
+                                        <a href="#"> <i class="ph-bookmark-simple-fill icon-img"></i></a>
+                                        </div>
+                                    </section>
+                                    <section >
+                                        <div class="flex gap-3 mt-4">
+                                            <p class="vendor-hours">Open <span class="vendor-time"> Always Open</span></p>
+
+                                        </div>
+
+                                    </section>
+
+                                </section>
+                            </section>
+
+                        </section>
+
+                    </section>
+                </li>
+            </ul>
+
+            <ul>
+
+                <li class="mb-9">
+                    <section class=" vendor-container mb-5">
+                        <section class="flex second-vendor-container gap-4">
+                            <!-- avatar section -->
+                            <div class="vendor-avatar">
+                                <img src="./images/hamburger-fill.png" class="justify-center avatar-img" alt="">
+                            </div>
+
+                            <!-- info section -->
+                            <section class="vendor-detail-container">
+                                <section class="vendor-info block">
+                                    <div class="flex gap-2">
+                                        <h2 class="vendor-name">The Burger Joint</h2>
+
+                                        <span class="vendor-reviews flex">
+                                            <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                            <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                            <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                            <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
+                                            <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i> 
+
+                                             Reviews
+                                        </span>
+                                    </div>
+                                    <div class="vendor-category">
+                                        <p>Food, ccc and shakes</p> 
+                                    </div>
+                                    <div class="flex mt-2 vendor-address">   
+                                            <textarea class="js-copytextarea vendor-directions">82 Adelaide Street, Collins Road. Lagos, State</textarea>
+                                            <button class="js-textareacopybtn copy-btn"><span><i class="ph-fill ph-copy" style="color: #48B8C6;"></i></span></button>
+                                    </div>
+                                    <div class="vendor-about">
+                                        <p>Our menu features burgers that are hand crafted with 100% Angus beef. <br>We use fresh, natural and delicious ingredients.</p>
+                                    </div>
+                                </section>
+
+                                <!-- contact section -->
+                                <section class="contact-section">
+                                    <section class="flex gap-4">
+                                        <div class="icon-border">
+                                            <a href="#"> <i class="ph-phone-fill icon-img"></i></a>
+                                        </div>
+                                        <div class="icon-border">
+                                            <a href="#" target="_blank"> <i class="ph-link-fill icon-img"></i></a>
+                                        </div>
+                                        <div class="icon-border">
+                                        <a href="#"> <i class="ph-bookmark-simple-fill icon-img"></i></a>
+                                        </div>
+                                    </section>
+                                    <section >
+                                        <div class="flex gap-3 mt-4">
+                                            <p class="vendor-hours">Open <span class="vendor-time"> till 12:00</span></p>
+                                            
+                                        </div>
+                                    
+                                    </section>
+                                
+                                </section>
+                            </section>
+                            
+                        </section>
+                
+                    </section>
+                </li>
+            </ul>
+           
 
         </section>
     </main>
