@@ -19,7 +19,7 @@
                 </li>
                 <li class="category-list">
                     <div class="">
-                       
+
                         <i class="ph-t-shirt mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
                         <p class="cat-text">Clothes</p>
                     </div>
@@ -43,7 +43,7 @@
                     </div>
                 </li>
                 <li class="category-list">
-                    
+
                     <div>
                         <i class="ph-watch mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
                         <p class="cat-text">Jewellery</p>
@@ -51,22 +51,22 @@
                 </li>
                 <li class="category-list">
                     <div>
-                       
+
                        <i class="ph-gender-female mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
                        <p class="cat-text">Beauty</p> 
-                       
+
                     </div>
                 </li>
                 <li class="category-list">
                     <div>
-                    
+
                        <i class="ph-toilet mb-4 category-icon" style="color: #818181; font-size: 24px;"></i>
                        <p class="cat-text">Household</p> 
                     </div>
                 </li>
                 <li class="category-list">
                     <div>
-                      
+
                        <i class="ph-toilet-paper mb-4" style="color: #818181; font-size: 24px;"></i>
                        <p class="cat-text">Supplies</p> 
                     </div>
@@ -79,13 +79,13 @@
                 </li>
                 <li class="category-list">
                     <div>
-                       
+
                        <i class="ph-wrench ml-3 mb-4" style="color: #818181; font-size: 24px;"></i>
                        <p class="cat-text">Tools</p> 
                     </div>
                 </li>
             </ul>
-            
+
         </div>
     </section>
 
@@ -111,21 +111,21 @@
                                 <section class="vendor-info block">
                                     <div class="flex gap-2">
                                         <h2 class="vendor-name"><%= vendors[i].businessName.charAt(0).toUpperCase() + vendors[i].businessName.slice(1)%></h2>
-                                    
+
                                         <span class="vendor-reviews flex">
                                             <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
                                             <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
                                             <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
                                             <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i>
                                             <i class="ph-star-fill" style="color: #818181; font-size: 14px;"></i> 
-                                            
+
                                              Reviews
                                         </span>
                                     </div>
                                     <div class="vendor-category">
                                         <p><%= vendors[i].businessCategory + ', ' + vendors[i].subCategory%></p> 
                                     </div>
-                                    <div class="flex mt-2 vendor-address">   
+                                    <div class="flex mt-2 vendor-address">
                                             <textarea class="js-copytextarea vendor-directions"><%= vendors[i].streetAddress + ', ' + vendors[i].city + ', ' + vendors[i].state%></textarea>
                                             <button class="js-textareacopybtn copy-btn"><span><i class="ph-fill ph-copy" style="color: #48B8C6;"></i></span></button>
                                     </div>
@@ -150,16 +150,16 @@
                                     <section >
                                         <div class="flex gap-3 mt-4">
                                             <p class="vendor-hours">Open <span class="vendor-time"> till <%= vendors[i].closeTime%></span></p>
-                                            
+
                                         </div>
-                                    
+
                                     </section>
-                                
+
                                 </section>
                             </section>
-                            
+
                         </section>
-                
+
                     </section>
                 </li>
             </ul>
